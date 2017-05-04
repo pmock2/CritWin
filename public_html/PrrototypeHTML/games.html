@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+    $(document).ready(function(){
+        $("#toggle").click(function(){
+            $("#showhide").toggle();
+        });
+        $("#but1").click(function(){
+            $("#1").hide();
+        });
+        $("#but1").click(function(){
+            $("#2").show();
+        });
+        $("#but2").click(function(){
+            $("#2").hide();
+        });
+        $("#but2").click(function(){
+            $("#3").show();
+        });
+        $("#but3").click(function(){
+            $("#3").hide();
+        });
+        $("#but3").click(function(){
+            $("#4").show();
+        });
+        $("#but4").click(function(){
+            $("#4").hide();
+        });
+        $("#but4").click(function(){
+            $("#5").show();
+        });
+        $("#but5").click(function(){
+            $("#5").hide();
+        });
+        $("#but5").click(function(){
+            $("#1").show();
+        });
+    });
+</script>
+
+<section class='aboutus' id='about'>
+    <div class='container'>
+        <div class="row">
+            <div class="col-md-12 yomer-text-center">
+                <h2 class="redtext" value="0">Matches</h2>
+                <p class="bigtext" value="0">
+                    Below is each match for this weekend. Please fill out all fields that apply and hit the "submit scores" button when finished, then hit the "Start Next Match" button to start the next match.
+                </p>
+            </div>
+            <h1 align="center">Week 1</h1>
+        </div>
+
+        <div class="row" id="1">
+                <h3 align="center">Team 1 vs Team 2</h3>
+                <div align="center"><input type="checkbox"> Reschedule</div>
+                <form action="" method="post">
+                <table align="center">
+                    <tr>
+                        <td align="left" class="bigtext">Team 1</td>
+                        <td align="right" class="bigtext">Team 2</td>
+                    </tr>
+                    <tr>
+                        <td width="300px">Points <input type="text" value="0"> </td>
+                        <td width="300px" align="right"> Points <input type="text" value="0"></td>
+                    </tr>
+                    <tr>
+                        <td width="300px">Win <input type="radio" name="win"></td>
+                        <td width="300px" align="right">Win <input type="radio" name="win"> </td>
+                    </tr>
+                    <tr>
+                        <td width="300px">Forfeit <input type="checkbox"></td>
+                        <td width="300px" align="right">Forfeit <input type="checkbox"></td>
+                    </tr>
+                </table>
+                    </form>
+            <!--<div align="center"><button id="toggle">View All Matches</button></div>-->
+            <div align="center">
+                <!--<button id="but1">Start Next Match</button>-->
+            </div>
+        </div>
+
+        <div id="showhide">
+
+        <div class="row" id="2" style="display:none">
+            <h3 align="center">Team 3 vs Team 4</h3>
+            <div align="center"><input type="checkbox"> Reschedule</div>
+            <table align="center">
+                <tr>
+                    <td align="left" class="bigtext" value="0">Team 3</td>
+                    <td align="right" class="bigtext" value="0">Team 4</td>
+                </tr>
+                <tr>
+                    <td width="300px">Points <input type="text" value="0"> </td>
+                    <td width="300px" align="right"> Points <input type="text" value="0"></td>
+                </tr>
+                <tr>
+                    <td width="300px">Win <input type="radio" name="win"></td>
+                    <td width="300px" align="right">Win <input type="radio" name="win"> </td>
+                </tr>
+            </table>
+            <div align="center"><button id="but2">Start Next Match</button></div>
+        </div>
+
+        <div class="row" id="3" style="display:none">
+            <h3 align="center">Team 5 vs Team 6</h3>
+            <div align="center"><input type="checkbox"> Reschedule</div>
+            <table align="center">
+                <tr>
+                    <td align="left" class="bigtext" value="0">Team 5</td>
+                    <td align="right" class="bigtext" value="0">Team 6</td>
+                </tr>
+                <tr>
+                    <td width="300px">Points <input type="text" value="0"> </td>
+                    <td width="300px" align="right"> Points <input type="text" value="0"></td>
+                </tr>
+                <tr>
+                    <td width="300px">Win <input type="radio" name="win"></td>
+                    <td width="300px" align="right">Win <input type="radio" name="win"> </td>
+                </tr>
+            </table>
+            <div align="center"><button id="but3">Start Next Match</button></div>
+        </div>
+
+        <div class="row" id="4" style="display:none">
+            <h3 align="center">Team 7 vs Team 8</h3>
+            <div align="center"><input type="checkbox"> Reschedule</div>
+            <table align="center">
+                <tr>
+                    <td align="left" class="bigtext" value="0">Team 7</td>
+                    <td align="right" class="bigtext" value="0">Team 8</td>
+                </tr>
+                <tr>
+                    <td width="300px">Points <input type="text" value="0"> </td>
+                    <td width="300px" align="right"> Points <input type="text" value="0"></td>
+                </tr>
+                <tr>
+                    <td width="300px">Win <input type="radio" name="win"></td>
+                    <td width="300px" align="right">Win <input type="radio" name="win"> </td>
+
+                </tr>
+            </table>
+            <div align="center"><button id="but4">Start Next Match</button></div>
+        </div>
+
+        <div class="row" id="5" style="display:none">
+            <h3 align="center">Team 9 vs Team 10</h3>
+            <div align="center"><input type="checkbox"> Reschedule</div>
+            <table align="center">
+                <tr>
+                    <td align="left" class="bigtext" value="0">Team 9</td>
+                    <td align="right" class="bigtext" value="0">Team 10</td>
+                </tr>
+                <tr>
+                    <td width="300px">Points <input type="text" value="0"> </td>
+                    <td width="300px" align="right"> Points <input type="text" value="0"></td>
+                </tr>
+                <tr>
+                    <td width="300px">Win <input type="radio" name="win"></td>
+                    <td width="300px" align="right">Win <input type="radio" name="win"> </td>
+                </tr>
+            </table>
+            <div align="center">
+                <form action="betweengames.html">
+                <button id="but5">End Debate Weekend</button>
+                    </form>
+            </div>
+
+        </div>
+            </div>
+        <hr>
+
+        <div class="row">
+            <h3 align="center"> Referee Options</h3>
+            <div align="center">
+            <button>Submit Scores</button>
+            </div>
+        </div>
+
+    </div>
+    </section>
+
+
+</body>
+</html>

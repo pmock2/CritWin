@@ -1,0 +1,136 @@
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes' name='viewport'>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="keywords" content="DnD, dangeon and dragons, roleplay, dice, roller, 3D, RPG, wargame"/>
+<meta name="description" content="Online 3D dice roller"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+<!--<link href="css/style.css" rel="stylesheet">-->
+<link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script type='text/javascript' src='/js/DropDown.js'></script>
+
+
+
+<title>Dice</title>
+
+<!--<style type="text/css">@import "css/main.css";</style>-->
+<style type="text/css">@import "/css/dice.css";</style>
+
+</head>
+
+<body>
+
+<!--<div class="nav">-->
+		<!--&lt;!&ndash;<div class='logo'></div>&ndash;&gt;-->
+		<!--<ul class="menu">-->
+		<!--<li class="btMenu">-->
+		<!--<a href="#">MENU</a></li>-->
+		<!--<li class="menuItem"><a href="index.html">Home</a></li>-->
+            <!--<li class="menuItem"><a href="StraightToLogin.html"><b>Sign Up/Log In</b></a></li>-->
+            <!--<li class="menuItem">-->
+            <!--<div class="dropdown">-->
+  <!--<button onclick="myFunction()" class="dropbtn">Quick Links</button>-->
+  <!--<div id="myDropdown" class="dropdown-content">-->
+    <!--<a href="#">Forums</a>-->
+    <!--<a href="#">Tools</a>-->
+    <!--<a href="#">Guides/Reviews</a>-->
+      <!--<a href="https://www.gofundme.com/2be9n9w"><b>Support Us!</b></a>-->
+      <!--<a href="StraightToLogin.html">Log In</a>-->
+  <!--</div>-->
+<!--</div>-->
+<!--</li>-->
+
+
+
+		<!--</ul>-->
+		<!--</div>-->
+
+  <!--<script type='text/javascript' src='js/jquery.js'></script>-->
+<!--<script type='text/javascript' src='js/bootstrap.min.js'></script>-->
+<!--<script type='text/javascript' src='js/scrollReveal.js'></script>-->
+
+
+
+
+<!--<script type='text/javascript'>-->
+<!--jQuery(document).ready(function(){-->
+
+
+				<!--$(".top").click(function(){-->
+					<!--$("html, body").animate({ scrollTop: 0 }, "slow");-->
+					<!--return false;-->
+				<!--});-->
+				<!--$(".btMenu").click(function(){-->
+
+					<!--if($(".menu").children(".menuItem").css("display") == "none"){-->
+						<!--$(".menu").children(".menuItem").slideDown();-->
+					<!--}-->
+					<!--else{-->
+						<!--$(".menu").children(".menuItem").slideUp();-->
+					<!--}-->
+				<!--});-->
+				<!--$(window).resize(function(){-->
+					<!--if($(window).innerWidth() > 1){-->
+						<!--$(".menu").children(".menuItem").css("display", "block");-->
+					<!--}-->
+					<!--else{-->
+						<!--$(".menu").children(".menuItem").css("display", "none");-->
+					<!--}-->
+				<!--});-->
+  <!--});-->
+<!--</script>-->
+    <div class="control_panel">
+
+    </div>
+    <div id="info_div" style="display: none">
+        <div class="center_field">
+            <span id="label"></span>
+        </div>
+        <div class="center_field">
+            <div class="bottom_field">
+                <span class="redtext">click to continue</span>
+            </div>
+        </div>
+    </div>
+    <div id="selector_div" style="display: none">
+
+        <div class="center_field">
+
+            <div id="sethelp">
+                Click the dice to select your roll, or type in your roll in the display box.
+
+
+            </div>
+        </div>
+
+        <div class="center_field">
+            <input class="input" type="text" id="set"  value="3d10+5" onfocus="inputFocus(this)" onblur="inputBlur(this)"><br/>
+
+            <button id="clear">Clear</button>
+            <button style="margin-left: 0.6em" id="throw">Throw!</button>
+
+
+        </div>
+    </div>
+    <div id="canvas"></div>
+
+    <script src="/libs/three.min.js"></script>
+    <script src="/libs/cannon.min.js"></script>
+    <!--script type="text/javascript" src="https://drive.google.com/uc?id=0ByGeV2TiysmOelhLSnlUQ3ZMc2M"></script>
+    <script type="text/javascript" src="https://drive.google.com/uc?id=0ByGeV2TiysmOczhfWW90OEV0dmM"></script-->
+
+
+    <script type="text/javascript" src="/js/teal.js"></script>
+    <script type="text/javascript" src="/js/dice.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" defer="defer">
+        dice_initialize(document.body);
+    </script>
+
+
+
+
+
+</body>
+</html>
