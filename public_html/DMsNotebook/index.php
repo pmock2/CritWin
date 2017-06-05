@@ -68,15 +68,12 @@ include("header.php")
 
             </div>
             <div class="col-md-3 yomer-text-center">
-                <a class="icon-widget exclame" href="#"
+                <a class="icon-widget exclame" href="tips.php"
                    data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Market</a>
                 <h3>Tips/Tricks for a Healthy Campaign</h3>
-                <p>
-                    <a class="link-more" href="#">See More</a>
-                </p>
 
                 <p>
-                    Coming Soon!
+                    Everything a DM needs to know to start and mantain a gaming group.
                 </p>
 
             </div>
