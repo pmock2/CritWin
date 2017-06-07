@@ -79,12 +79,12 @@ if (isset($_POST["u"])) {
         $p_hash = md5($p);
 //        $p_hash = $p;
         // Add user info into the database table for the main site table
-        $sql = "INSERT INTO users (username, email, password, gender, country, ip, signup, lastlogin, notescheck)       
-		        VALUES('$u','$e','$p_hash','$g','$c','$ip',now(),now(),now())";
+//        $sql = "INSERT INTO users (username, email, password, signup, lastlogin) VALUES('$u','$e','$p_hash',now(),now(),now())";
+        $sql = "INSERT INTO users (username, email, password, signup, lastlogin) VALUES('$u','$e','$p_hash',now(),now())";
         $query = mysqli_query($db_conx, $sql);
         $uid = mysqli_insert_id($db_conx);
         // Establish their row in the useroptions table
-        $sql = "INSERT INTO useroptions (id, username, background) VALUES ('$uid','$u','original')";
+        $sql = "INSERT INTO useroptions (id, username, background) VALUES ('$uid','$u','original test')";
         $query = mysqli_query($db_conx, $sql);
         // Create directory(folder) to hold each user's files(pics, MP3s, etc.)
 //        if (!file_exists("user/$u")) {
@@ -94,7 +94,7 @@ if (isset($_POST["u"])) {
         $to = "$e";
         $from = "noreply@critwin.com";
         $subject = 'critwin Account Activation';
-        $message = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>critwin Message</title></head><body style="margin:0px; font-family:Tahoma, Geneva, sans-serif;"><div style="padding:10px; background:#333; font-size:24px; color:#CCC;"><a href="http://www.critwin.com"><img src="http://www.critwin.com/img/bg-banner.jpg" width="36" height="30" alt="critwin" style="border:none; float:left;"></a>critwin Account Activation</div><div style="padding:24px; font-size:17px;">Hello ' . $u . ',<br /><br />Click the link below to activate your account when ready:<br /><br /><a href="http://www.critwin.com/loginforms/activation.php?id=' . $uid . '&u=' . $u . '&e=' . $e . '&p=' . $p_hash . '">Click here to activate your account now</a><br /><br />Login after successful activation using your:<br />* E-mail Address: <b>' . $e . '</b></div></body></html>';
+        $message = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>critwin Message</title></head><body style="margin:0; font-family:Tahoma, Geneva, sans-serif;"><div style="padding:10px; background:#333; font-size:24px; color:#CCC;"><a href="http://www.critwin.com"><img src="http://www.critwin.com/img/bg-banner.jpg" width="36" height="30" alt="critwin" style="border:none; float:left;"></a>critwin Account Activation</div><div style="padding:24px; font-size:17px;">Hello ' . $u . ',<br /><br />Click the link below to activate your account when ready:<br /><br /><a href="http://www.critwin.com/loginforms/activation.php?id=' . $uid . '&u=' . $u . '&e=' . $e . '&p=' . $p_hash . '">Click here to activate your account now</a><br /><br />Login after successful activation using your:<br />* E-mail Address: <b>' . $e . '</b></div></body></html>';
         $headers = "From: $from\n";
         $headers .= "MIME-Version: 1.0\n";
         $headers .= "Content-type: text/html; charset=iso-8859-1\n";
@@ -261,7 +261,7 @@ if (isset($_POST["e"])) {
 
             var SignUpstatus = _("SignUpstatus");
             if (u == "" || e == "" || p1 == "" || p2 == "") {
-                SignUpstatus.innerHTML = '<strong style="color:#F00;"><br>Usernames must begin with a letter</strong>';
+                SignUpstatus.innerHTML = '<strong style="color:#F00;"><br>Please Fill out all fields</strong>';
             } else if (p1 != p2) {
                 SignUpstatus.innerHTML = '<strong style="color:#F00;"><br>Your passwords do not match</strong>';
 //            } else if( _("terms").style.display == "none"){
