@@ -57,12 +57,13 @@ include("header.php")
 
                 </div>
                 <div class="col-md-3 yomer-text-center">
-                    <a class="icon-widget tracker" href="#" data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Market</a>
+                    <a class="icon-widget tracker" href="ClassCreation.php" data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Market</a>
                     <h3>Character Creator Quiz</h3>
 
 
                     <p>
-                        This tool, coming VERY soon, will walk you through a quiz and determine your best fit class using our own very special algorithm.
+                        Build your your class based on this new quiz! Crawl through your first dungeon, killing monsters and
+                        saving (or killing) an innocent man! After answering around 15 questions, we'll give you our take on you class preferences.
                     </p>
 
                 </div>
