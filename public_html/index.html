@@ -1,39 +1,57 @@
-﻿<?php
-include("header.php");
-include("make_new_tables.php");
-?>
 
 
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="shortcut icon" href="favicon.ico">
     <meta charset="UTF-8">
-<!--    <META HTTP-EQUIV="refresh" CONTENT="15">-->
+    <META HTTP-EQUIV="refresh" CONTENT="15">
     <title>
         CritWin
     </title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <meta name="google-site-verification" content="PJSAZ0KSeqiw_wB5pURWWUEb2ESbYUg0bNm3T4kjuYQ" />
-    <meta property="og:url"           content="http://www.critwin.com" />
-    <meta property="og:type"          content="CritWin" />
-    <meta property="og:title"         content="CritWin" />
-    <meta property="og:description"   content="Made for DMs, By DMs" />
-    <meta name="keywords" content="DnD, dangeon and dragons, roleplay, dice, roller, 3D, RPG, wargame"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script type='text/javascript' src='js/DropDown.js'></script>
     <!--[if lt IE 9]>
-    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
-    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
 
-<?php echo $header ?>
+<!--Favicon change to something better
+-->
+
+
+<div class="nav">
+    <div class='logo'></div>
+    <ul class="menu">
+        <li class="btMenu">
+            <a href="javascript:void(0)">MENU</a></li>
+        <li class="menuItem"><a href="index.php">Home</a></li>
+        <li class="menuItem"><a href="loginforms/StraightToLogin.php"><b>Log In</b></a></li>
+        <li class="menuItem">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Quick Links</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="DMsNotebook/DMNotebook.html">DM's Notebook</a>
+                    <a href="Tools.html">Tools</a>
+                    <a href="Guides/guidesandreviews.php">Adventure Log</a>
+                    <a href="https://www.youtube.com/channel/UCtd_XSgL5iuKPX9LFX7lQzw">Videos!</a>
+                    <a href="https://www.gofundme.com/2be9n9w"><b>Support Us!</b></a>
+                    <a href="bio/bio.php">About the Creators</a>
+                    <a href="loginforms/StraightToLogin.php">Log In</a>
+                </div>
+            </div>
+        </li>
+
+
+    </ul>
+</div>
 
 <!-- WRAPPER STARTS HERE-->
 <div class='wrapper'>
@@ -42,21 +60,21 @@ include("make_new_tables.php");
 
 
         <div class='container titles yomer-text-center'>
-            <h1 data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s"></h1>
+            <h1 data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s">Welcome to CritWin</h1>
             <div class='subhead'>
-                <p style="margin-top: 25%">Its literally impossible to lose if you CritWin</p>
-                <br>
-                <div id="fb-root"></div>
-                <script>(function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id;
-                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));</script>
-                <div style="padding-top: 150px" class="fb-like" data-href="https://facebook.com/critwin" data-width="200" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                <p>Made for DMs, by DMs</p>
+                <div class='buttons'>
+                    <!--<form method="POST" action="#">-->
+                    <!--<button class="form-submit googleplus" type="submit" title="Continue with Google+"></button>-->
+                    <!---->
+                    <!--</form>-->
 
-                <!--<form method="GET" action="#">-->
+                    <form method="POST" action="https://www.facebook.com/critwin">
+
+                        <button class="form-submit facebook" type="submit" title="See our facebook page"></button>
+
+                    </form>
+                    <!--<form method="GET" action="#">-->
                     <!--<button class="form-submit email" type="submit" title="Continue with Email"></button>-->
                     <!--</form>-->
                 </div>
@@ -80,7 +98,7 @@ include("make_new_tables.php");
             </div>
             <div class="row">
                 <div class="col-md-3 yomer-text-center">
-                    <a class="icon-widget icon-share" href="DMsNotebook"
+                    <a class="icon-widget icon-share" href="DMsNotebook/DMNotebook.html"
                        data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Share</a>
                     <h3>DM's Notebook</h3>
 
@@ -88,13 +106,13 @@ include("make_new_tables.php");
                         experienced DM's alike. <b>Check out our new DM Blog!</b>
                     </p>
 
-<!--                    <p>-->
-<!--                        <a class="link-more" href="DMNotebook.html">Read</a>-->
-<!--                    </p>-->
+                    <p>
+                        <a class="link-more" href="DMsNotebook/DMNotebook.html">Read</a>
+                    </p>
 
                 </div>
                 <div class="col-md-3 yomer-text-center">
-                    <a class="icon-widget icon-follow" href="Tools"
+                    <a class="icon-widget icon-follow" href="Tools.html"
                        data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Follow</a>
                     <h3>Tools</h3>
 
@@ -102,23 +120,23 @@ include("make_new_tables.php");
                     <p>
                         We now have a functional dice roller! Check it out!
                     </p>
-<!--                    <p>-->
-<!--                        <a class="link-more" href="Tools.html">Tools</a>-->
-<!--                    </p>-->
+                    <p>
+                        <a class="link-more" href="Tools.html">Tools</a>
+                    </p>
 
                 </div>
                 <div class="col-md-3 yomer-text-center">
-                    <a class="icon-widget icon-market" href="AdventureLibrary"
+                    <a class="icon-widget icon-market" href="Guides/guidesandreviews.php"
                        data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Market</a>
-                    <h3>Adventure Library</h3>
+                    <h3>Guides and Reviews</h3>
 
 
                     <p>
-                        Guides and reviews for modules new and old, as well as our own worlds! Check out our new<a href="AdventureLibrary/homebrew/swordcoast/swordcoast.php"> homebrew</a> variant of the Sword Coast!
+                        Coming Soon!
                     </p>
-<!--                    <p>-->
-<!--                        <a class="link-more" href="#">Guides/Reviews</a>-->
-<!--                    </p>-->
+                    <p>
+                        <a class="link-more" href="#">Guides/Reviews</a>
+                    </p>
 
                 </div>
                 <div class="col-md-3 yomer-text-center">
@@ -128,11 +146,11 @@ include("make_new_tables.php");
 
 
                     <p>
-                        We're currently working on our first <a href="Threads/index.php">forum page</a>! Want to be our first moderator? Awesome! Email us at contactcritwin@gmail.com to learn more.
+                        We're currently working on our first forum page! Want to be our first moderator? Awesome! Email us at contactcritwin@gmail.com to learn more.
                     </p>
-<!--                    <p>-->
-<!--                        <a class="link-more" href="loginforms/signup.php">Join Now!</a>-->
-<!--                    </p>-->
+                    <p>
+                        <a class="link-more" href="loginforms/signup.php">Join Now!</a>
+                    </p>
 
                 </div>
             </div>
@@ -160,10 +178,11 @@ include("make_new_tables.php");
         <div class="container">
             <div class="row">
                 <div class="col-md-12 yomer-text-center">
-                    <h2 class="redtext">New Threads Page!!</h2>
-                    <p class="bigtext">The website is really starting to come togethor. We now have an experimental <a href="Threads/index.php">threads/forums page</a> for you guys to check out!
-                    Feel free to make an account and post away! Need an account? Make one <a href="loginforms/signup.php">here</a>.</p>
-
+                    <h2 class="redtext">Beta Site Now In Progress</h2>
+                    <p class="bigtext">If you're reading this we'd just like to say a big THANK YOU. You're reading this
+                        not only because you saw the site, but you actally scrolled dwn to check us out
+                        . We really appreciate it, and we hope you'll be back soon to check out our daily progress.</p>
+                    <small class="redtext">Sincerely, the CritWin team</small>
 
                 </div>
             </div>
@@ -329,11 +348,12 @@ include("make_new_tables.php");
     <section class="social " id='social'>
         <div class="container">
             <div class="row" align="center">
-                <div class="fb-like" data-href="https://facebook.com/critwin" data-width="200" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-
                 <!--<div class="col-md-12 ">-->
                 <!--<div class="social_icons">-->
-                <!-- START OF HIT COUNTER CODE --><br><script language="JavaScript" src="http://www.counter160.com/js.js?img=11"></script><br><a href="https://www.000webhost.com"><img src="http://www.counter160.com/images/11/left.png" alt="Free web hosting" border="0" align="texttop"></a><a href="http://www.hosting24.com"><img alt="Web hosting" src="http://www.counter160.com/images/11/right.png" border="0" align="texttop"></a><!-- END OF HIT COUNTER CODE -->
+                <!-- START OF HIT COUNTER CODE -->
+                Click Tracker<br>
+                <script language="JavaScript" src="http://www.counter160.com/js.js?img=11"></script>
+                <br>
 
                 <!--<ul>-->
                 <!--<li class="facebook"> <a href="#." data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s"><i class="fa fa-facebook"></i> </a> </li>-->
@@ -345,7 +365,6 @@ include("make_new_tables.php");
                 <!--&lt;!&ndash;</ul>&ndash;&gt;-->
                 <!--</div>-->
                 <!--</div>-->
-
             </div>
         </div>
     </section>
@@ -353,7 +372,7 @@ include("make_new_tables.php");
     <!--/ SOCIAL ENDS HERE-->
 
 
- <!-- /WRAPPER ENDS HERE DESIGNED BY VIJAYAN PP-->
+</div> <!-- /WRAPPER ENDS HERE DESIGNED BY VIJAYAN PP-->
 <script type='text/javascript' src='js/jquery.js'></script>
 <script type='text/javascript' src='js/bootstrap.min.js'></script>
 <script type='text/javascript' src='js/scrollReveal.js'></script>

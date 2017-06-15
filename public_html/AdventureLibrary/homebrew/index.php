@@ -58,7 +58,7 @@ include("../header.php")
 
 
             <p>
-                Aeznor is 100% homebrewed by the CritWin team. Drawing inspiration from the Dragonlance novels, Aeznor exists long after an apocolyptic event that reshaped the world.
+                ZACK PUT A FREAKIN DESCRIPTION HERE. :D
             </p>
 
 

@@ -35,7 +35,6 @@ if (isset($_SESSION["username"])) {
 <script language="JavaScript" type="text/javascript">
 </script>
 
-
 <section class='aboutus' id='about'>
     <div class="container2">
         <div id="intro">
@@ -353,9 +352,9 @@ if (isset($_SESSION["username"])) {
     </div>
 </section>
 
-<script type='text/javascript' src='/js/jquery.js'></script>
-<script type='text/javascript' src='/js/bootstrap.min.js'></script>
-<script type='text/javascript' src='/js/scrollReveal.js'></script>
+<script type='text/javascript' src='.../js/jquery.js'></script>
+<script type='text/javascript' src='../js/bootstrap.min.js'></script>
+<script type='text/javascript' src='../js/scrollReveal.js'></script>
 <script type='text/javascript'>
     jQuery(document).ready(function () {
 
