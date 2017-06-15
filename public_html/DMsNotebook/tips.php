@@ -72,7 +72,7 @@ if (isset($_SESSION["username"])) {
                     <a href="index.php">Back to DMs Notebook</a>
 
                 </div>
-                <button class="yomer-center" style="color: darkred;" onclick="openNav()">? Class List</button>
+                <button class="yomer-center" style="color: darkred;" onclick="openNav()">&#9776; Class List</button>
             </div>
         </div>
         <div class="row">
@@ -85,41 +85,41 @@ if (isset($_SESSION["username"])) {
                 </p>
                 <h3 class="bigtext"style="color: black;">IRL</h3>
                 <p class="bigtext"style="color: black;">
-                    In our opinion, nothing beats the classic feel of sitting around a table and rolling dice with a group of friends. Whether you've convinced a group of your friends to try this game with you, or joined a group at a local shop, you’re guaranteed to have fun!
+                    In our opinion, nothing beats the classic feel of sitting around a table and rolling dice with a group of friends. Whether you've convinced a group of your friends to try this game with you, or joined a group at a local shop, you're guaranteed to have fun!
                 </p>
                 <button class="yomer-center" style="color: darkred;" onclick="openNav()"
-                ">? Class List</button>
+                ">&#9776; Class List</button>
                 <hr>
 
                 <h2 class="redtext" id="2">The Players</h2>
                 <p style="font-size: small">Once you've found your group, it's time to assign roles.</p>
-                <h3 class="bigtext"style="color: black;">Types of Players</h3>
-                <p class="bigtext"style="color: black;">
+                <h3 class="bigtext" style="color: black;">Types of Players</h3>
+                <p class="bigtext" style="color: black;">
                     There are 8 categories most players fall into playing an RPG.
                 </p>
-                <h4 class="bigtext"style="color: black;">The Power Gamer</h4>
-                <p class="bigtext"style="color: black;">
+                <h4 class="bigtext" style="color: black;">The Power Gamer</h4>
+                <p class="bigtext" style="color: black;">
                     has done the math, and min-maxed a character to be perfectly optimized for the adventure. Their goal is to kill all the things, and get all the loot.
                 </p>
-                <h4 class="bigtext"style="color: black;">The Rules Lawyer</h4>
-                <p class="bigtext"style="color: black;">
+                <h4 class="bigtext" style="color: black;">The Rules Lawyer</h4>
+                <p class="bigtext" style="color: black;">
                     has every obscure rule memorized, and will happily interrupt you to point out that what you were doing was wrong. The term, "Rules as Written" will be used more than the dice will in any given game.
                 </p>
-                <h4 class="bigtext"style="color: black;">The Casual Gamer</h4>
-                <p class="bigtext"style="color: black;">
+                <h4 class="bigtext" style="color: black;">The Casual Gamer</h4>
+                <p class="bigtext" style="color: black;">
                     probably just came for the food and to hang with friends. They like playing the game, but their character is most likely a dwarf named Bob that simply swings his sword every round.
                 </p>
-                <h4 class="bigtext"style="color: black;">The Psycho</h4>
-                <p class="bigtext"style="color: black;">
+                <h4 class="bigtext" style="color: black;">The Psycho</h4>
+                <p class="bigtext" style="color: black;">
                     wants to set fire to the entrails of his enemies as he drags them through the street. The more important an NPC is in your adventure, the more they want to kill them just for fun.
                 </p>
-                <h4 class="bigtext"style="color: black;">The Role Player</h4>
-                <p class="bigtext"style="color: black;">
+                <h4 class="bigtext" style="color: black;">The Role Player</h4>
+                <p class="bigtext" style="color: black;">
                     insists that you call them by their character's name while they play. They'd prefer to verbosely debate with the goblins and learn their backstory rather than fight them.
                 </p>
-                <h4 class="bigtext"style="color: black;">The Meta Gamer</h4>
-                <p class="bigtext"style="color: black;">
-                    has a hard time understanding the difference between player and character knowledge. They'll say, "what’s that guy’s AC?" and "I've read this module, the secret door is right here."
+                <h4 class="bigtext" style="color: black;">The Meta Gamer</h4>
+                <p class="bigtext" style="color: black;">
+                    has a hard time understanding the difference between player and character knowledge. They'll say, "what's that guy's AC?" and "I've read this module, the secret door is right here."
                 </p>
                 <h4 class="bigtext"style="color: black;">The Game Breaker</h4>
                 <p class="bigtext"style="color: black;">
@@ -130,7 +130,7 @@ if (isset($_SESSION["username"])) {
                     is the rarest and most precious of players. Unfortunately, these players usually either are overshadowed by the more extreme player types, or graduate to become DMs on their own. They understand the importance of both following the rules, and agreeing on new house rules; creating interesting and powerful characters, but giving other players a turn to shine; having fun, but following the storyline. These are the players you want to fill your group with.
                 </p>
                 <button class="yomer-center" style="color: darkred;" onclick="openNav()"
-                ">? Class List</button>
+                ">&#9776; Class List</button>
                 <hr>
 
                 <h2 class="redtext" id="3">Where and When</h2>
@@ -139,7 +139,7 @@ if (isset($_SESSION["username"])) {
 
                 </p>
                 <button class="yomer-center" style="color: darkred;" onclick="openNav()"
-                ">? Class List</button>
+                ">&#9776; Class List</button>
                 <hr>
 
                 <h2 class="redtext" id="4">Materials</h2>
@@ -149,7 +149,7 @@ if (isset($_SESSION["username"])) {
                 </p>
 
                 <button class="yomer-center" style="color: darkred;" onclick="openNav()"
-                ">? Class List</button>
+                ">&#9776; Class List</button>
                 <hr>
 
                 <h2 class="redtext" id="5">Atmosphere</h2>
@@ -157,7 +157,7 @@ if (isset($_SESSION["username"])) {
                 <p class="bigtext"style="color: black;">
                 </p>
                     <button class="yomer-center" style="color: darkred;" onclick="openNav()"
-                ">? Class List</button>
+                ">&#9776; Class List</button>
                 <hr>
 
                 <h2 class="redtext" id="6">The Module</h2>
@@ -165,8 +165,8 @@ if (isset($_SESSION["username"])) {
                 <p class="bigtext"style="color: black;">
 
                 </p>
-                <button class="yomer-center" style="color: darkred;" onclick="openNav()"
-                ">? Class List</button>
+                <button class="yomer-center" style="color: darkred;" onclick="openNav()" 
+                        &#9776; Class List</button>
                 <hr>
 
                 <h2 class="redtext" id="7">Customization</h2>
@@ -176,7 +176,7 @@ if (isset($_SESSION["username"])) {
                 </p>
                 <br>
                 <button class="yomer-center" style="color: darkred;" onclick="openNav()"
-                ">? Class List</button>
+                ">&#9776; Class List</button>
                 <hr>
 
                 <h2 class="redtext" id="8">Planning</h2>
@@ -185,7 +185,7 @@ if (isset($_SESSION["username"])) {
                 <p class="bigtext"style="color: black;">
                 </p>
                 <button class="yomer-center" style="color: darkred;" onclick="openNav()"
-                ">? Class List</button>
+                ">&#9776; Class List</button>
                 <hr>
 
             </div>
@@ -324,14 +324,13 @@ if (isset($_SESSION["username"])) {
     (function ($) {
         window.scrollReveal = new scrollReveal();
     })();
-
-    $(document).ready(function(){
-        $('a[href*=#]').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    $(document).ready(function () {
+        $('a[href*=#]').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
                 && location.hostname == this.hostname) {
                 var $target = $(this.hash);
                 $target = $target.length && $target
-                    || $('[name=' + this.hash.slice(1) +']');
+                    || $('[name=' + this.hash.slice(1) + ']');
                 if ($target.length) {
                     var targetOffset = $target.offset().top - 50;
                     $('html,body')

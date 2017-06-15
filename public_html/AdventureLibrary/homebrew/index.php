@@ -12,10 +12,6 @@ include("../header.php")
     <link href="../../css/style.css" rel="stylesheet">
     <link href="../../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script type='text/javascript' src='../../js/DropDown.js'></script>
-    <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
- <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
- <!---->
 </head>
 <body>
 <?php echo $header ?>
@@ -46,8 +42,9 @@ include("../header.php")
                    data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s"></a>
                 <h3>World Setting - Sword Coast Meets Eragon</h3>
                 <p>
-                    This world setting is just plain awesome. It takes the modules, "The Lost Mine of Phandelver", "The Hoard of the Dragon Queen", and "The rise of Tiamate", and
-                    combines them with the lore of Eragon. Dragons are but a fairy tale to the people of the sword coast. That is, until the party discovers a strange egg deep in a forgotten mine.
+                    This world setting is just plain awesome. It takes the modules, "The Lost Mine of Phandelver",
+                    "The Hoard of the Dragon Queen", and "The rise of Tiamate", and
+                    combines them with the lore of Eragon.
                 </p>
 
         </div>

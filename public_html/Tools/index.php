@@ -44,7 +44,7 @@ include("header.php")
                 </div>
                 <div class="col-md-3 yomer-text-center">
                     <a class="icon-widget random" href="" data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Follow</a>
-                    <h3>Random Generators</h3>
+                    <h3>Initiative Tracker</h3>
                     <p>
                         <a class="link-more" href="">Generate Randomness!</a>
                     </p>
@@ -62,9 +62,9 @@ include("header.php")
 
 
                     <p>
-                        Build your your class based on this new quiz! Crawl through your first dungeon, killing monsters and
-                        saving (or killing) an innocent man! After answering around 15 questions, we'll give you our take on you class preferences.
-                    </p>
+                        Take our unique quiz that will walk you through a scenario as if a DM is narrating it to you. At the end, we'll apply
+                        our custom algorithm to your answers and give you some character recommendations.
+                        </p>
 
                 </div>
                 <div class="col-md-3 yomer-text-center">
@@ -85,7 +85,7 @@ include("header.php")
         
         <div class="col-md-3 yomer-text-center">
                     <a class="icon-widget comp" href="#" data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Recommend</a>
-                    <h3>Compendium</h3>
+                    <h3>Monster/Item Card Tool</h3>
                      <p>
                         <a class="link-more" href="#">Search</a>
                     </p>
@@ -122,7 +122,7 @@ include("header.php")
                 </div>
         <div class="col-md-3 yomer-text-center">
                     <a class="icon-widget spells" href="#" data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Recommend</a>
-                    <h3>Spell List</h3>
+                    <h3>Character Tracker</h3>
                      <p>
                         <a class="link-more" href="#">Spells</a>
                     </p>
