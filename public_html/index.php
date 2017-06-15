@@ -44,7 +44,7 @@ include("make_new_tables.php");
         <div class='container titles yomer-text-center'>
             <h1 data-scroll-reveal="wait 0.25s, then enter top and move 40px over 1s"></h1>
             <div class='subhead'>
-                <p style="margin-top: 25%">Its literally impossible to lose if you CritWin</p>
+                <p style="margin-top: 25%">It's impossible to lose if you CritWin</p>
                 <br>
                 <div id="fb-root"></div>
                 <script>(function(d, s, id) {
