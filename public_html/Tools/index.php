@@ -62,8 +62,8 @@ include("header.php")
 
 
                     <p>
-                        Take our unique quiz that will walk you through a scenario as if a DM is narrating it to you. At the end, we'll apply
-                        our custom algorithm to your answers and give you some character recommendations.
+                        Walk through a scenario as if a DM is narrating it to you. At the end, we'll apply
+                        our algorithm to your answers to give you some recommendations.
                         </p>
 
                 </div>
@@ -84,14 +84,13 @@ include("header.php")
         <div class="row">
         
         <div class="col-md-3 yomer-text-center">
-                    <a class="icon-widget comp" href="#" data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Recommend</a>
+                    <a class="icon-widget comp" href="cardtool.php" data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Recommend</a>
                     <h3>Monster/Item Card Tool</h3>
                      <p>
-                        <a class="link-more" href="#">Search</a>
+                        <a class="link-more" href="cardtool.php">View Prototype</a>
                     </p>
-
                     <p>
-                       Coming Soon!
+                       View Prototype
                     </p>
 
                 </div>
