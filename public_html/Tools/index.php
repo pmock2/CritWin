@@ -29,7 +29,7 @@ include("header.php")
                        Our website will supply you with all the essentials for your roll playing game. 
                     </p>
                 </div>
-            </div>
+    </div>
     <div class="row">
                 <div class="col-md-3 yomer-text-center">
                     <a class="icon-widget icon-share1" href="DiceRoller.html" data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Share</a>

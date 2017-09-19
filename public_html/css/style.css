@@ -1133,3 +1133,37 @@ h4 {
     /*border-top-left-radius: 5px;*/
     /*border-top-right-radius: 5px;*/
 }
+
+/****************************CARD OPTIONS*************************/
+
+.abils {
+    display: inline-block;
+    font-size: 16px;
+    padding-right: 50px;
+    color: darkred;
+}
+.addbtn {
+    height: 40px;
+    width: 40px;
+    border: solid lightgray;
+    border-radius: 5px;
+    display: inline-block;
+}
+.addbtn:hover {
+    border-color: lightblue;
+    background-color: lightblue;
+}
+.minbtn {
+    height: 40px;
+    width: 40px;
+    border: solid lightgray;
+    border-radius: 5px;
+    display: inline-block;
+}
+.minbtn:hover {
+    border-color: lightblue;
+    background-color: lightblue;
+}
+.plussign {
+
+}
