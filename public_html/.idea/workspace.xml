@@ -40,8 +40,8 @@
       <file leaf-file-name="cardoptions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tools/cardoptions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2900">
-              <caret line="181" column="45" lean-forward="false" selection-start-line="181" selection-start-column="45" selection-end-line="181" selection-end-column="45" />
+            <state relative-caret-position="615">
+              <caret line="199" column="16" lean-forward="false" selection-start-line="199" selection-start-column="16" selection-end-line="199" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -68,8 +68,10 @@
                 <element signature="n#style#0;n#span#0;n#div#1;n#div#9;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#2;n#div#9;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#div#10;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1505799490028" expanded="false" signature="8807:8842" ph="..." />
-                <marker date="1505799490028" expanded="false" signature="8979:9014" ph="..." />
+                <element signature="n#style#0;n#input#1;n#div#0;n#div#10;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#11;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1505799718908" expanded="false" signature="8807:8842" ph="..." />
+                <marker date="1505799718908" expanded="false" signature="8979:9014" ph="..." />
               </folding>
             </state>
           </provider>
@@ -353,12 +355,12 @@
       <workItem from="1505712157490" duration="2871000" />
       <workItem from="1505755158088" duration="651000" />
       <workItem from="1505756550900" duration="7972000" />
-      <workItem from="1505797556800" duration="1922000" />
+      <workItem from="1505797556800" duration="2149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="315866000" />
+    <option name="totallyTimeSpent" value="316093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="1934" height="1030" extended-state="0" />
@@ -731,8 +733,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tools/cardoptions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2900">
-          <caret line="181" column="45" lean-forward="false" selection-start-line="181" selection-start-column="45" selection-end-line="181" selection-end-column="45" />
+        <state relative-caret-position="615">
+          <caret line="199" column="16" lean-forward="false" selection-start-line="199" selection-start-column="16" selection-end-line="199" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -759,8 +761,10 @@
             <element signature="n#style#0;n#span#0;n#div#1;n#div#9;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#div#9;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#div#10;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1505799490028" expanded="false" signature="8807:8842" ph="..." />
-            <marker date="1505799490028" expanded="false" signature="8979:9014" ph="..." />
+            <element signature="n#style#0;n#input#1;n#div#0;n#div#10;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#11;n#form#0;n#div#0;n#section#0;n#body#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1505799718908" expanded="false" signature="8807:8842" ph="..." />
+            <marker date="1505799718908" expanded="false" signature="8979:9014" ph="..." />
           </folding>
         </state>
       </provider>

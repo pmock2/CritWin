@@ -192,6 +192,12 @@ include("header.php");
                 </div>
             </div>
             <hr>
+            <div class="form-group">
+                <h3>Notes</h3>
+                <input style="width: 100%" type="text" class="form-control" id="notes" placeholder="Extra notes"
+                       name="notes">
+            </div>
+            <hr>
 
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
