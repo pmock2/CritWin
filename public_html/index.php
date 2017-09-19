@@ -5,6 +5,7 @@ include("make_new_tables.php");
 
 
 <!DOCTYPE html>
+
 <html>
 <head>
     <link rel="shortcut icon" href="favicon.ico">
