@@ -277,25 +277,6 @@ include("header.php");
                 b(jQuery)
             }
         }));
-        <!---->
-        <!--$(".menu").children("li:nth-child(3)").click(function(){-->
-        <!--$("body").scrollTo("#about", 600);-->
-        <!---->
-        <!--});-->
-        <!---->
-        <!--$(".menu").children("li:nth-child(4)").click(function(){-->
-        <!--$("body").scrollTo("#mission", 600);-->
-        <!--});-->
-        <!---->
-        <!--$(".menu").children("li:nth-child(5)").click(function(){-->
-        <!---->
-        <!--$("body").scrollTo("#whyus", 600);-->
-        <!--});-->
-        <!---->
-        <!--$(".menu").children("li:nth-child(6)").click(function(){-->
-        <!--$("body").scrollTo("#whychose", 600);-->
-        <!--});-->
-
     });
 
     (function ($) {

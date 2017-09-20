@@ -1,5 +1,5 @@
 <?php
-include("header.php")
+//include("header.php")
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +26,7 @@ include("header.php")
 
 <body>
 
-<?php echo $header ?>
+<?php //echo $header ?>
 <section class='aboutus' id='about'>
     <div class='container1'>
         <div class="row">

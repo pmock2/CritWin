@@ -120,14 +120,14 @@ include("header.php")
 
                 </div>
         <div class="col-md-3 yomer-text-center">
-                    <a class="icon-widget spells" href="#" data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Recommend</a>
+                    <a class="icon-widget spells" href="charactertracker.php" data-scroll-reveal="wait 0.25s, then enter top and move 70px over 1s">Recommend</a>
                     <h3>Character Tracker</h3>
                      <p>
-                        <a class="link-more" href="#">Spells</a>
+                        <a class="link-more" href="charactertracker.php">Prototype</a>
                     </p>
 
                     <p>
-                       Coming Soon!
+                       Prototype
                     </p>
 
                 </div>
