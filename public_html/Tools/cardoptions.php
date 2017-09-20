@@ -234,7 +234,7 @@ include("header.php");
                 </div>
                 <hr>
 
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button id='card-submit-btn' type="submit" class="btn btn-default">Submit</button>
             </form>
         </div>
     </section>
@@ -328,5 +328,8 @@ include("header.php");
     </div>
 </div>
 
+<!-- Scripts -->
+<script type='text/javascript' src="../js/cardOptions.js"></script>
+<!--         -->
 </body>
 </html>
