@@ -728,18 +728,20 @@ small {
     left: 0;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 80px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    /*padding: 8px 8px 8px 32px;*/
+    text-align: center;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     color: white;
     display: block;
-    transition: 0.3s
+    transition: 0.3s;
+    /*word-wrap: break-word;*/
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -747,12 +749,17 @@ small {
     color: darkgoldenrod;
 }
 
+.sidenav .side_nav_options:hover, .offcanvas .sidenav:focus {
+    color: black;
+}
+
+
 /* Position and style the close button (top right corner) */
 .closebtn {
     position: absolute;
-    top: 30px;
-    right: 25px;
-    font-size: 36px !important;
+    top: 50px;
+    right: 15px;
+    font-size: 50px !important;
     margin-left: 50px;
 }
 
@@ -1165,10 +1172,10 @@ h4 {
     background-color: lightblue;
 }
 /**************************************Character Tracker*********************************/
-.abils {
+.abils_tracker {
     width: 10%;
     height: 10%;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     text-align: center;
     margin-bottom: 10px;
 }
@@ -1183,14 +1190,14 @@ h4 {
     border-radius: 7px;
 }
 #info {
-    border: solid #428bca;
+    /*border: solid #428bca;*/
 }
 
 #abils {
-    border: solid #5cb85c;
+    /*border: solid #5cb85c;*/
 }
 #hp {
-    border: solid #d9534f;
+    /*border: solid #d9534f;*/
 }
 #feats {
     border: solid #ec971f;
@@ -1207,4 +1214,193 @@ h4 {
 
 .btn a {
     color: white;
+}
+
+.side_nav_btn {
+    position: fixed;
+    overflow: hidden;
+    left: 0;
+    border: solid deepskyblue;
+    top: 80px;
+    background-color: deepskyblue;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 55px;
+    height: 50px;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.add_new_btn {
+    position: fixed;
+    overflow: hidden;
+    right: 0;
+    border: solid #d9534f;
+    top: 80px;
+    background-color: #d9534f;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 55px;
+    height: 50px;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.bigtext #background {
+    margin-bottom: 0;
+}
+
+.abils_score {
+    width: 250px;
+    height: 60px;
+    text-align: center;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.abils_score_wrap {
+    width: 250px;
+    display: inline-block;
+}
+.title_wrapper {
+    width: 70%;
+    left: 15%
+}
+
+.side_nav_options {
+    font-size: 35px;
+    text-align: center;
+}
+
+.sidenav_right {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    background-color: black; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    right: 0;
+}
+
+/* The navigation menu links */
+.sidenav_right a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    /*word-wrap: break-word;*/
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav_right a:hover, .offcanvas a:focus {
+    color: darkgoldenrod;
+}
+
+.sidenav_right .side_nav_options:hover, .offcanvas .side_nav_options:focus {
+    color: black;
+}
+
+.sidenav_right h2 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    top: 10%;
+}
+
+.sidenav_title {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+.sidenav_right h1 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.sidenav_right .option_bg_color {
+    padding: 0 10% 0 10%;
+    height: 4%;
+    border: none;
+    background-color: black;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
+
+
+}
+.sidenav_right .add_new_title {
+    margin-bottom: 10px;
+    background-color: black;
+    height: 6%;
+    border: solid white;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+}
+.sidenav_right .closebtn {
+    position: absolute;
+    top: 40px;
+    right: 4%;
+    font-size: 50px !important;
+    margin-left: 50px;
+}
+
+.sidenav_right .closebtn:hover {
+    color: white;
+}
+.sidenav_right .dropdown_btn {
+    background-color: black;
+    border: solid white;
+    border-radius: 0;
+    font-size: 25px;
+    font-family: inherit;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+}
+
+.preview_btn {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    background-color: #00bfff;
+}
+
+.add_btn {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    height: 8%;
+    border-radius: 0;
+    font-size: 40px;
+    padding-bottom: 60px
+}
+
+.preview_text_area {
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
 }
