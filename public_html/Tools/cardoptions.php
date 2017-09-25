@@ -5,7 +5,8 @@
  * Date: 9/17/2017
  * Time: 11:47 PM
  */
-include("header.php");
+//include("header.php");
+
 ?>
 <html>
 <head>
@@ -65,8 +66,9 @@ include("header.php");
     })(window, document);
 </script>
 <body>
-<?php echo $header ?>
+<?php //echo $header ?>
 <body>
+<!-- Card Options -->
 <div id="options">
     <section class='aboutus' id='about'>
         <div class='container1'>
@@ -142,17 +144,10 @@ include("header.php");
                            name="cr">
                 </div>
                 <hr>
-                <div class="form-group">
+                <div id="abils-group" class="form-group">
                     <h3>Abilities</h3>
                     <div id="abils_list">
-                        Name:
-                        <input style="width: 100%; font-weight: bold; font-style: italic;" type="text"
-                               class="form-control"
-                               id="abils_name0" placeholder="Nimble Escape" name="abils_name0">
-                        Description:
-                        <input style="width: 100%;" type="text" class="form-control" id="abils_des0"
-                               placeholder="The goblin can take the Disengage or Hide action as a bonus action on each of its turns."
-                               name="abils_des0">
+                        <!-- Abilities inserted here with javascript -->
                     </div>
                     <br>
                     <div class="addbtn">
@@ -163,17 +158,10 @@ include("header.php");
                     </div>
                 </div>
                 <hr>
-                <div class="form-group">
+                <div id="acts-group" class="form-group">
                     <h3>Actions</h3>
                     <div id="acts_list">
-                        Name:
-                        <input style="width: 100%; font-weight: bold; font-style: italic;" type="text"
-                               class="form-control"
-                               id="acts_name0" placeholder="Scimitar" name="acts_name0">
-                        Description:
-                        <input style="width: 100%;" type="text" class="form-control" id="acts_des0"
-                               placeholder="Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage."
-                               name="acts_des0">
+                        <!-- Actions inserted here with javascript -->
                     </div>
                     <br>
                     <div class="addbtn">
@@ -185,17 +173,10 @@ include("header.php");
                 </div>
                 <hr>
 
-                <div class="form-group">
+                <div id="racts-group" class="form-group">
                     <h3>Reactions</h3>
-                    <div id="acts_list">
-                        Name:
-                        <input style="width: 100%; font-weight: bold; font-style: italic;" type="text"
-                               class="form-control"
-                               id="reacts_name0" placeholder="Reaction" name="reacts_name0">
-                        Description:
-                        <input style="width: 100%;" type="text" class="form-control" id="reacts_des0"
-                               placeholder="Reaction Description"
-                               name="reacts_des0">
+                    <div id="racts_list">
+                        <!-- Reactions inserted here with javascript -->
                     </div>
                     <br>
                     <div class="addbtn">
@@ -206,17 +187,10 @@ include("header.php");
                     </div>
                 </div>
                 <hr>
-                <div class="form-group">
+                <div id="lacts-group" class="form-group">
                     <h3>Legendary Actions</h3>
-                    <div id="acts_list">
-                        Name:
-                        <input style="width: 100%; font-weight: bold; font-style: italic;" type="text"
-                               class="form-control"
-                               id="legacts_name0" placeholder="Legendary Action" name="legacts_name0">
-                        Description:
-                        <input style="width: 100%;" type="text" class="form-control" id="legacts_des0"
-                               placeholder="Legendary Action Description"
-                               name="legacts_des0">
+                    <div id="lacts_list">
+                        <!-- Legendary Actions inserted here with javascript -->
                     </div>
                     <br>
                     <div class="addbtn">
@@ -234,16 +208,17 @@ include("header.php");
                 </div>
                 <hr>
 
-                <button id='card-submit-btn' type="submit" class="btn btn-default">Submit</button>
+                <button id='card-submit-btn' class="btn btn-default">Submit</button>
             </form>
         </div>
     </section>
 </div>
 
+<!-- Card Tool -->
 <div id="card_wrap" style="display: none">
     <div id="card_head">
-        <h1>CARD TITLE</h1>
-        <h2>Some Creature (some size)</h2>
+        <h1 id="card_title">CARD TITLE</h1>
+        <h2 id="card_subtitle">Some Creature (some size)</h2>
     </div>
     <tapered-rule></tapered-rule>
     <div class="stats">
@@ -274,12 +249,12 @@ include("header.php");
             </tr>
             <tr>
             <tr>
-                <td id="str">10 (+0)</td>
-                <td id="dex">10 (+0)</td>
-                <td id="con">10 (+0)</td>
-                <td id="int">10 (+0)</td>
-                <td id="wis">10 (+0)</td>
-                <td id="cha">10 (+0)</td>
+                <td id="str"><span id="str_total"></span> (<span id="str_mod"></span>)</td>
+                <td id="dex"><span id="dex_total"></span> (<span id="dex_mod"></span>)</td>
+                <td id="con"><span id="con_total"></span> (<span id="con_mod"></span>)</td>
+                <td id="int"><span id="int_total"></span> (<span id="int_mod"></span>)</td>
+                <td id="wis"><span id="wis_total"></span> (<span id="wis_mod"></span>)</td>
+                <td id="cha"><span id="cha_total"></span> (<span id="cha_mod"></span>)</td>
             </tr>
             </tbody>
         </table>
@@ -300,31 +275,21 @@ include("header.php");
         </div>
     </div>
     <tapered-rule></tapered-rule>
-    <div class="propertyblock" id="abils_list">
-        <h4 id="abil1_name">Ability.</h4>
-        <p id="abil1_descript">This is an ability </p>
+    <div class="propertyblock" id="abils_list" style="width:100%">
+        <div class="title">Abilities.</div>
+        <!-- Insert abilities here -->
     </div>
-    <div class="propertyblock">
+    <div class="propertyblock" id="acts_list" style="width:100%">
         <div class="title">Actions</div>
-        <h4 id="atk1_name">Weapon Attack.</h4>
-        <p id="atk1_descript">Description. This is a very long description that takes several lines to show the whole
-            thing</p>
+        <!-- Insert actions here -->
     </div>
-    <div class="propertyblock">
+    <div class="propertyblock" id="racts_list" style="width:100%">
         <div class="title">Reactions</div>
-        <h4 id="rectn1_name">Reaction.</h4>
-        <p id="rectn1_descript">Description. This is a very long description that takes several lines to show the whole
-            thing</p>
+        <!-- Insert reactions here -->
     </div>
-    <div class="propertyblock">
+    <div class="propertyblock" id="lacts_list" style="width:100%">
         <div class="title">Legendary Actions</div>
-        <p id="lgn1_descript">The monster can take 3 legendary actions, choosing from the options below. Only one
-            legendary action can be
-            used at a time and only at the end of another creature's turn. The monster regains spent legendary actions
-            at the start of its turn.</p>
-        <h4 id="lgnd1_name">Legendary.</h4>
-        <p id="atk1_descript">Description. This is a very long description that takes several lines to show the whole
-            thing</p>
+        <!-- Insert legendary actions here -->
     </div>
 </div>
 
