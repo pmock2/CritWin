@@ -153,9 +153,6 @@
                     <div class="addbtn">
                         <span class="glyphicon glyphicon-plus" style="font-size: 25px;top: 5px; left: 6px"></span>
                     </div>
-                    <div class="minbtn">
-                        <span class="glyphicon glyphicon-minus" style="font-size: 25px;top: 5px; left: 4px"></span>
-                    </div>
                 </div>
                 <hr>
                 <div id="acts-group" class="form-group">
@@ -166,9 +163,6 @@
                     <br>
                     <div class="addbtn">
                         <span class="glyphicon glyphicon-plus" style="font-size: 25px;top: 5px; left: 6px"></span>
-                    </div>
-                    <div class="minbtn">
-                        <span class="glyphicon glyphicon-minus" style="font-size: 25px;top: 5px; left: 4px"></span>
                     </div>
                 </div>
                 <hr>
@@ -182,9 +176,6 @@
                     <div class="addbtn">
                         <span class="glyphicon glyphicon-plus" style="font-size: 25px;top: 5px; left: 6px"></span>
                     </div>
-                    <div class="minbtn">
-                        <span class="glyphicon glyphicon-minus" style="font-size: 25px;top: 5px; left: 4px"></span>
-                    </div>
                 </div>
                 <hr>
                 <div id="lacts-group" class="form-group">
@@ -195,9 +186,6 @@
                     <br>
                     <div class="addbtn">
                         <span class="glyphicon glyphicon-plus" style="font-size: 25px;top: 5px; left: 6px"></span>
-                    </div>
-                    <div class="minbtn">
-                        <span class="glyphicon glyphicon-minus" style="font-size: 25px;top: 5px; left: 4px"></span>
                     </div>
                 </div>
                 <hr>

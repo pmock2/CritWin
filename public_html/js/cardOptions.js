@@ -185,15 +185,17 @@ let addAppendable = (elementType) =>{
 
     //Create close button and append it to container.
     //TODO: Add styling for button hover and button click.
-    let closeButtonContainer = document.createElement('div');
+    //let closeButtonContainer = document.createElement('div');
     let closeButton = document.createElement('span');
     closeButton.setAttribute('class', 'glyphicon glyphicon-minus-sign');
+    closeButton.setAttribute('style', 'float:right');
     closeButton.addEventListener('click',(evt)=>{
-        alert(`WILL BE IMPLEMENTED SOON. CLICKED BY ${evt.srcElement}`);
+        let spanParent = evt.srcElement.parentNode;
+        spanParent.parentNode.removeChild(spanParent);
     });
-    closeButtonContainer.appendChild(closeButton);
-    closeButtonContainer.setAttribute('style','float:right');
-    appendableContainer.appendChild(closeButtonContainer);
+    //closeButtonContainer.appendChild(closeButton);
+    //closeButtonContainer.setAttribute('style','float:right');
+    appendableContainer.appendChild(closeButton);
 
     //Create Name input and append it to container.
     appendableContainer.appendChild(document.createTextNode('Name: '));
@@ -237,7 +239,6 @@ let generateCard = (card) =>{
     let cardWisMod = document.querySelector('#wis_mod');
     let cardChaTotal = document.querySelector('#cha_total');
     let cardChaMod = document.querySelector('#cha_mod');
-    let cardAbilityList = document.querySelector('#abils_list');
 
     //Insert data into card elements.
     try{
@@ -272,7 +273,7 @@ let generateCard = (card) =>{
             cardAbilityContainer.appendChild(cardAbilityDesc);
 
             //Append generated ability container to document.
-            document.querySelector('#card_wrap > #abils_list').appendChild(cardAbilityContainer);
+            cardWrapper.querySelector('#abils_list').appendChild(cardAbilityContainer);
         });
 
         // Add each action.
