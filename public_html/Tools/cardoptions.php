@@ -5,8 +5,35 @@
  * Date: 9/17/2017
  * Time: 11:47 PM
  */
-//include("header.php");
+include("header.php");
+//include_once("check_login_status.php");
+//if(ISSET($_POST["card"])){
+    //echo 'This is a test';
+//    include_once("db_conx.php");
+    //TODO: Add a regex that replaces characters NOT needed in a JSON object.
+    //$card = preg_replace('#[^a-z0-9]#i', '', $_POST("card"));
+//    $c = $_POST('card');
+    //$u = $_SESSION('u');
+//    $sql = "INSERT INTO user_cards1 (username, card) VALUES ('$u', '$c')";
+//    $query = mysqli_query($db_conx, $sql);
+//    echo "Sent input to card.";
+//    exit();
 
+if(isset($_POST["card"])) {
+    include_once("db_conx.php");
+//    TODO Add a preg_replace to the JSON input.
+//    $input = preg_replace('#[^a-z0-9]#i', '', $_POST['card']);
+    $input = $_POST["card"];
+    if(isset($_SESSION['usernamßßßße'])){
+        $u = $_SESSION['username'];
+    } else {
+        $u = 'no_username';
+    }
+    $sql = "INSERT INTO user_cards1 (username, card) VALUES ('$u', '$input')";
+    $query = mysqli_query($db_conx, $sql);
+    echo "Sent $input to database as card";
+    exit();
+}
 ?>
 <html>
 <head>
@@ -66,7 +93,7 @@
     })(window, document);
 </script>
 <body>
-<?php //echo $header ?>
+<?php echo $header ?>
 <body>
 <!-- Card Options -->
 <div id="options">
@@ -90,6 +117,19 @@
                     <h3>Subtitle</h3>
                     <input style="font-style: italic; width: 100%" type="text" class="form-control" id="subtitle"
                            placeholder="Small humanoid (goblinoid), neutral evil" name="subtitle">
+                </div>
+                <hr>
+                <div class="form-group">
+                    <h3>Armor Class</h3>
+                    <input type="number" class="form-control" id="armorclass" placeholder="10" name="armorclass">
+                </div>
+                <div class="form-group">
+                    <h3>Hit Points</h3>
+                    <input type="text" class="form-control" id="hitpoints" placeholder="2(1d4)" name="hitpoints">
+                </div>
+                <div class="form-group">
+                    <h3>Speed</h3>
+                    <input type="text" class="form-control" id="speed" placeholder="fast" name="speed">
                 </div>
                 <hr>
                 <h3>Ability Scores</h3>
@@ -279,8 +319,32 @@
         <div class="title">Legendary Actions</div>
         <!-- Insert legendary actions here -->
     </div>
-</div>
+    <div>
+        <button id="send-button">TEST AJAX CALL</button>
+    </div>
 
+</div>
+<script>
+   /* document.querySelector('#send-button').addEventListener('click', (evt)=>{
+        let x = new XMLHttpRequest();
+        x.open('POST', 'cardoptions.php');
+        x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        x.onreadystatechange = function(){
+            if (x.readyState === 4 && x.status === 200) {
+                console.log(x.responseText);
+            }
+            else if (x.responseText == 'This is a test') {
+                alert("Test success");
+            }
+            else {
+                alert(x.responseText);
+            }
+        };
+        x.send('card=teeter');
+
+    })*/
+</script>
 <!-- Scripts -->
 <script type='text/javascript' src="../js/cardOptions.js"></script>
 <!--         -->

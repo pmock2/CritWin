@@ -55,6 +55,9 @@ const CARD_WRAPPER = '#card_wrap';
         let cardInt = document.querySelector(CARD_INT).value;
         let cardWis = document.querySelector(CARD_WIS).value;
         let cardCha = document.querySelector(CARD_CHA).value;
+        let cardArmorClass = document.querySelector('#armorclass').value;
+        let cardHitPoints = document.querySelector('#hitpoints').value;
+        let cardSpeed = document.querySelector('#speed').value;
 
         //Get all card abilities.
         let cardAbilities = [...document.querySelectorAll(CARD_ABILITY)].map((ability)=>{
@@ -87,7 +90,7 @@ const CARD_WRAPPER = '#card_wrap';
         });
 
 
-        let _card = new Card(cardTitle, cardSubtitle, cardSkills, cardSenses, cardLanguages, cardChallengeRating,
+        let _card = new Card(cardTitle, cardSubtitle, cardArmorClass, cardHitPoints, cardSpeed, cardSkills, cardSenses, cardLanguages, cardChallengeRating,
             [cardStr, cardDex, cardCon, cardInt, cardWis, cardCha], cardAbilities, cardActions, cardReactions, cardLengendaryActions);
 
         //Generate card using user options.
@@ -98,6 +101,9 @@ const CARD_WRAPPER = '#card_wrap';
             cardOptions.setAttribute('style', 'display: none');
             let cardWrapper = document.querySelector('#card_wrap');
             cardWrapper.setAttribute('style','');
+            document.querySelector('#send-button').addEventListener('click', (evt)=>{
+              saveCard(_card);
+           });
         } catch (e){
             console.error(e);
         }
@@ -225,25 +231,32 @@ let generateCard = (card) =>{
     let cardWrapper = document.querySelector(CARD_WRAPPER);
 
     //Find elements to insert data into card.
-    let cardTitle = document.querySelector('#card_title');
-    let cardSubtitle = document.querySelector('#card_subtitle');
-    let cardStrTotal = document.querySelector('#str_total');
-    let cardStrMod = document.querySelector('#str_mod');
-    let cardDexTotal = document.querySelector('#dex_total');
-    let cardDexMod = document.querySelector('#dex_mod');
-    let cardConTotal = document.querySelector('#con_total');
-    let cardConMod = document.querySelector('#con_mod');
-    let cardIntTotal = document.querySelector('#int_total');
-    let cardIntMod = document.querySelector('#int_mod');
-    let cardWisTotal = document.querySelector('#wis_total');
-    let cardWisMod = document.querySelector('#wis_mod');
-    let cardChaTotal = document.querySelector('#cha_total');
-    let cardChaMod = document.querySelector('#cha_mod');
+    let cardTitle = cardWrapper.querySelector('#card_title');
+    let cardSubtitle = cardWrapper.querySelector('#card_subtitle');
+    let cardArmorClass = cardWrapper.querySelector('#AC');
+    let cardHitPoints = cardWrapper.querySelector('#hp');
+    let cardSpeed = cardWrapper.querySelector('#speed');
+    let cardStrTotal = cardWrapper.querySelector('#str_total');
+    let cardStrMod = cardWrapper.querySelector('#str_mod');
+    let cardDexTotal = cardWrapper.querySelector('#dex_total');
+    let cardDexMod = cardWrapper.querySelector('#dex_mod');
+    let cardConTotal = cardWrapper.querySelector('#con_total');
+    let cardConMod = cardWrapper.querySelector('#con_mod');
+    let cardIntTotal = cardWrapper.querySelector('#int_total');
+    let cardIntMod = cardWrapper.querySelector('#int_mod');
+    let cardWisTotal = cardWrapper.querySelector('#wis_total');
+    let cardWisMod = cardWrapper.querySelector('#wis_mod');
+    let cardChaTotal = cardWrapper.querySelector('#cha_total');
+    let cardChaMod = cardWrapper.querySelector('#cha_mod');
 
     //Insert data into card elements.
     try{
         cardTitle.innerText = card.title;
         cardSubtitle.innerText = card.subtitle;
+
+        cardArmorClass.innerText = card.armorClass;
+        cardHitPoints.innerText = card.hitPoints;
+        cardSpeed.innerText = card.cardSpeed;
 
         cardStrTotal.innerText = card.scores.str;
         cardStrMod.innerText = calculateModifier(card.scores.str);
@@ -344,16 +357,51 @@ let generateCard = (card) =>{
             return statMod;
         }
     }
-
 };
+
+/**
+ * Save card to database.
+ * @param card Object of Card Class.
+ */
+function saveCard(card){
+    let cardJSON = JSON.stringify(card.toJSON());
+    let ajax = ajaxObj('POST', 'cardoptions.php');
+
+    // TODO: Add event listener for when ajax is ready.
+    ajax.onreadystatechange = function(){
+        if(ajaxReturn(ajax) === true){
+            alert('ajax returned true');
+        }
+
+    };
+
+    ajax.send(`card=${cardJSON}`);
+    // ajax.send('card=newtest');
+}
+
+function ajaxObj(meth, url) {
+    let x = new XMLHttpRequest();
+    x.open(meth, url, true);
+    x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    return x;
+}
+
+function ajaxReturn(x) {
+    if (x.readyState === 4 && x.status === 200) {
+        return true;
+    }
+}
 
 /**
  * Class representing Card created by user.
  */
 class Card {
-    constructor(title, subtitle, skills, senses, languages, challengeRating, scores, abilities, actions, reactions, legendaryActions) {
+    constructor(title, subtitle, armorClass, hitPoints, speed, skills, senses, languages, challengeRating, scores, abilities, actions, reactions, legendaryActions) {
         this.title = title;
         this.subtitle = subtitle;
+        this.armorClass = armorClass;
+        this.hitPoints = hitPoints;
+        this.cardSpeed = speed;
         this.skills = skills;
         this.senses = senses;
         this.languages = languages;
@@ -401,6 +449,9 @@ class Card {
         return {
             title: this.title,
             subtitle: this.subtitle,
+            armorClass: this.armorClass,
+            hitPoints: this.hitPoints,
+            speed: this.cardSpeed,
             skills: this.skills,
             senses: this.senses,
             languages: this.languages,
