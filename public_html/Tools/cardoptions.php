@@ -14,6 +14,7 @@ include("header.php");
     //$card = preg_replace('#[^a-z0-9]#i', '', $_POST("card"));
 //    $c = $_POST('card');
     //$u = $_SESSION('u');
+//    $u = "devTesting";
 //    $sql = "INSERT INTO user_cards1 (username, card) VALUES ('$u', '$c')";
 //    $query = mysqli_query($db_conx, $sql);
 //    echo "Sent input to card.";

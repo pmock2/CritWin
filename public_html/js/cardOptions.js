@@ -376,14 +376,6 @@ function saveCard(card){
     };
 
     ajax.send(`card=${cardJSON}`);
-    // ajax.send('card=newtest');
-}
-
-function ajaxObj(meth, url) {
-    let x = new XMLHttpRequest();
-    x.open(meth, url, true);
-    x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    return x;
 }
 
 function ajaxReturn(x) {

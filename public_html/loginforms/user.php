@@ -1,5 +1,5 @@
 <?php
-include("header.php")
+//include("header.php")
 ?>
 <?php
 /**
@@ -16,6 +16,9 @@ if (isset($_SESSION["username"])) {
     $varfield = "Welcome " . $_SESSION["username"];
     $dropfield = "View Profile";
 }
+
+
+
 // Initialize any variables that the page might echo
 $u = "";
 $e = "";
@@ -25,6 +28,7 @@ $userlevel = "";
 $country = "";
 $joindate = "";
 $lastsession = "";
+
 // Make sure the _GET username is set, and sanitize it
 if (isset($_GET["u"])) {
     $u = preg_replace('#[^a-z0-9]#i', '', $_GET['u']);
@@ -83,7 +87,10 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
             
             <form action="logout.php">
             <button class="biggertext">Log Out</button>
-                </form>';
+                </form>
+            <button id="card-button" class="biggertext">List Cards</button>';
+
+
 
     }
 
@@ -175,6 +182,7 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
 <script type='text/javascript' src='js/jquery.js'></script>
 <script type='text/javascript' src='js/bootstrap.min.js'></script>
 <script type='text/javascript' src='js/scrollReveal.js'></script>
+<script type='text/javascript' src='js/user.js'></script>
 <script type='text/javascript'>
     jQuery(document).ready(function () {
 
