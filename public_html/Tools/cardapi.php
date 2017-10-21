@@ -36,7 +36,7 @@ class QueryResult{
     public function getJSON(){
         $json = json_encode(array('id'=>$this->id,
             'username'=>$this->username,
-            'card'=>$this->card));
+            'card'=>$this -> card));
         return $json;
     }
 }

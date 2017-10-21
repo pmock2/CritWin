@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a6b1736-fe66-4bf7-8bfe-29a0cdf6ccf4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/Tools/cardapi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/Tools/dbtest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/loginforms/js/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/Tools/cardoptions.php" afterPath="$PROJECT_DIR$/public_html/Tools/cardoptions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/cardOptions.js" afterPath="$PROJECT_DIR$/public_html/js/cardOptions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/loginforms/user.php" afterPath="$PROJECT_DIR$/public_html/loginforms/user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/Tools/cardapi.php" afterPath="$PROJECT_DIR$/public_html/Tools/cardapi.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,7 +61,7 @@
             <state relative-caret-position="320">
               <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
               <folding>
-                <marker date="1508559559022" expanded="true" signature="937:991" ph="SELECT * FRO... user_cards1" />
+                <marker date="1508560181449" expanded="true" signature="939:993" ph="SELECT * FRO... user_cards1" />
               </folding>
             </state>
           </provider>
@@ -292,12 +286,12 @@
       <workItem from="1506754976520" duration="5958000" />
       <workItem from="1506963673655" duration="4413000" />
       <workItem from="1507391708980" duration="5641000" />
-      <workItem from="1507968633080" duration="12027000" />
+      <workItem from="1507968633080" duration="12175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71120000" />
+    <option name="totallyTimeSpent" value="71268000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -795,7 +789,7 @@
         <state relative-caret-position="320">
           <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
           <folding>
-            <marker date="1508559559022" expanded="true" signature="937:991" ph="SELECT * FRO... user_cards1" />
+            <marker date="1508560181449" expanded="true" signature="939:993" ph="SELECT * FRO... user_cards1" />
           </folding>
         </state>
       </provider>
