@@ -44,7 +44,7 @@ class QueryResult{
     include("header.php");
 // Echo all cards matching username.
     if (isset($_GET["u"])) {
-        $username = $_GET["u"];
+               $username = $_GET["u"];
         $sql = "SELECT * FROM user_cards1 WHERE username = '$username'";
 
         $result = mysqli_query($db_conx, $sql);
@@ -59,7 +59,7 @@ class QueryResult{
         $jsonQueryArray = array();
 
         for($i=0;$i<count($allQueryArray);$i++){
-            array_push($jsonQueryArray, array($i+1=> $allQueryArray[$i]->getJSON()));
+            array_push($jsonQueryArray, array('card'=> $allQueryArray[$i]->getJSON()));
         }
 
         echo(json_encode($jsonQueryArray));

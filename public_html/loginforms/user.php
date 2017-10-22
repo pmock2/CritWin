@@ -182,7 +182,39 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
 <script type='text/javascript' src='js/jquery.js'></script>
 <script type='text/javascript' src='js/bootstrap.min.js'></script>
 <script type='text/javascript' src='js/scrollReveal.js'></script>
-<script type='text/javascript' src='js/user.js'></script>
+<!--<script type='text/javascript' src='js/user.js'></script>-->
+<script type="text/javascript">
+    (function(){
+        let cardButton = document.querySelector('#card-button');
+        cardButton.addEventListener('click',(evt)=>{
+            cardRequestPromise().then((resp)=>{
+                let cards = resp.map((_card)=>{
+                    card = JSON.parse(_card["card"]);
+                    card["card"] = JSON.parse(card["card"]);
+                    return card;
+                });
+                console.log(cards);
+            });
+        });
+    })();
+
+    function cardRequestPromise(){
+        //TODO: CARD_API_URL needs to be changed once out of testing
+        const username = "<?php echo $u?>";
+        const CARD_API_URL = `http://critwin.com/test2/api/cardapi.php?u=${username}`;
+        return(
+            new Promise((resolve, reject)=>{
+                fetch(CARD_API_URL)
+                    .then((resp)=>{
+                        resolve(resp.json());
+                    })
+                    .catch((err)=>{
+                        reject(err);
+                    })
+            })
+        )
+    }
+</script>
 <script type='text/javascript'>
     jQuery(document).ready(function () {
 

@@ -367,7 +367,6 @@ function saveCard(card){
     let cardJSON = JSON.stringify(card.toJSON());
     let ajax = ajaxObj('POST', 'cardoptions.php');
 
-    // TODO: Add event listener for when ajax is ready.
     ajax.onreadystatechange = function(){
         if(ajaxReturn(ajax) === true){
             alert('ajax returned true');

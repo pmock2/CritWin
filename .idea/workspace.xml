@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a6b1736-fe66-4bf7-8bfe-29a0cdf6ccf4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/loginforms/cardapi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/Tools/cardapi.php" afterPath="$PROJECT_DIR$/public_html/Tools/cardapi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/cardOptions.js" afterPath="$PROJECT_DIR$/public_html/js/cardOptions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/loginforms/user.php" afterPath="$PROJECT_DIR$/public_html/loginforms/user.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,52 +20,52 @@
       <file leaf-file-name="cardOptions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/js/cardOptions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="379" column="0" lean-forward="true" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
+            <state relative-caret-position="277">
+              <caret line="369" column="9" lean-forward="false" selection-start-line="369" selection-start-column="9" selection-end-line="369" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DropDown.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/loginforms/js/DropDown.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/loginforms/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="40" />
+            <state relative-caret-position="446">
+              <caret line="203" column="58" lean-forward="false" selection-start-line="203" selection-start-column="58" selection-end-line="203" selection-end-column="58" />
               <folding>
-                <marker date="1508551194657" expanded="true" signature="747:751" ph="SELECT card " />
-                <marker date="1508551194657" expanded="true" signature="752:797" ph="Select the m... the" />
-                <marker date="1508551194657" expanded="true" signature="799:864" ph="SELECT * FRO... users" />
-                <marker date="1508551194657" expanded="true" signature="1122:1133" ph="..." />
-                <marker date="1508551194657" expanded="true" signature="2176:2264" ph="..." />
-                <marker date="1508551194657" expanded="true" signature="2316:2396" ph="..." />
-                <marker date="1508551194657" expanded="true" signature="2595:2621" ph="..." />
-                <marker date="1508551194657" expanded="true" signature="2602:2621" ph="..." />
-                <marker date="1508551194657" expanded="true" signature="3791:3818" ph="..." />
+                <marker date="1508711255020" expanded="true" signature="747:751" ph="SELECT card " />
+                <marker date="1508711255020" expanded="true" signature="752:797" ph="Select the m... the" />
+                <marker date="1508711255020" expanded="true" signature="799:864" ph="SELECT * FRO... users" />
+                <marker date="1508711255020" expanded="true" signature="1122:1133" ph="..." />
+                <marker date="1508711255020" expanded="true" signature="2176:2264" ph="..." />
+                <marker date="1508711255020" expanded="true" signature="2316:2396" ph="..." />
+                <marker date="1508711255020" expanded="true" signature="2595:2621" ph="..." />
+                <marker date="1508711255020" expanded="true" signature="2602:2621" ph="..." />
+                <marker date="1508711255020" expanded="true" signature="3791:3818" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cardapi.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cardapi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/loginforms/cardapi.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="61" column="52" lean-forward="false" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
+              <folding>
+                <marker date="1508575695177" expanded="true" signature="976:1030" ph="SELECT * FRO... user_cards1" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cardapi.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/Tools/cardapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+            <state relative-caret-position="461">
+              <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
               <folding>
-                <marker date="1508560181449" expanded="true" signature="939:993" ph="SELECT * FRO... user_cards1" />
+                <marker date="1508573424135" expanded="true" signature="969:1023" ph="SELECT * FRO... user_cards1" />
               </folding>
             </state>
           </provider>
@@ -95,8 +99,8 @@
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/loginforms/js/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -148,6 +152,7 @@
       <find>200</find>
       <find>4</find>
       <find>Log Out</find>
+      <find>List</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,10 +166,11 @@
         <option value="$PROJECT_DIR$/public_html/Tools/cardoptions.php" />
         <option value="$PROJECT_DIR$/public_html/Tools/dbtest.php" />
         <option value="$PROJECT_DIR$/public_html/loginforms/js/user.js" />
-        <option value="$PROJECT_DIR$/public_html/js/cardOptions.js" />
-        <option value="$PROJECT_DIR$/public_html/loginforms/user.php" />
         <option value="$PROJECT_DIR$/public_html/Tools/rest.php" />
         <option value="$PROJECT_DIR$/public_html/Tools/cardapi.php" />
+        <option value="$PROJECT_DIR$/public_html/js/cardOptions.js" />
+        <option value="$PROJECT_DIR$/public_html/loginforms/cardapi.php" />
+        <option value="$PROJECT_DIR$/public_html/loginforms/user.php" />
       </list>
     </option>
   </component>
@@ -175,10 +181,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="80" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1360" />
+    <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectView">
@@ -213,26 +218,7 @@
               <item name="CritWin" type="b2602c69:ProjectViewProjectNode" />
               <item name="CritWin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CritWin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CritWin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="loginforms" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CritWin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CritWin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="loginforms" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="CritWin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CritWin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public_html" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Tools" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -246,6 +232,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/danny/Documents/GitHub/CritWin/public_html/js/cardOptions.js" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public_html/loginforms" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -286,15 +277,15 @@
       <workItem from="1506754976520" duration="5958000" />
       <workItem from="1506963673655" duration="4413000" />
       <workItem from="1507391708980" duration="5641000" />
-      <workItem from="1507968633080" duration="12175000" />
+      <workItem from="1507968633080" duration="15770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71268000" />
+    <option name="totallyTimeSpent" value="74863000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20416667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -331,20 +322,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public_html/js/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/Tools/cardtool.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/Tools/cardoptions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3196">
@@ -730,46 +707,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/loginforms/js/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/loginforms/js/DropDown.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/cardOptions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="379" column="0" lean-forward="true" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/loginforms/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="40" />
-          <folding>
-            <marker date="1508551194657" expanded="true" signature="747:751" ph="SELECT card " />
-            <marker date="1508551194657" expanded="true" signature="752:797" ph="Select the m... the" />
-            <marker date="1508551194657" expanded="true" signature="799:864" ph="SELECT * FRO... users" />
-            <marker date="1508551194657" expanded="true" signature="1122:1133" ph="..." />
-            <marker date="1508551194657" expanded="true" signature="2176:2264" ph="..." />
-            <marker date="1508551194657" expanded="true" signature="2316:2396" ph="..." />
-            <marker date="1508551194657" expanded="true" signature="2595:2621" ph="..." />
-            <marker date="1508551194657" expanded="true" signature="2602:2621" ph="..." />
-            <marker date="1508551194657" expanded="true" signature="3791:3818" ph="..." />
           </folding>
         </state>
       </provider>
@@ -784,12 +727,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/loginforms/js/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/Tools/cardapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+        <state relative-caret-position="461">
+          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding>
-            <marker date="1508560181449" expanded="true" signature="939:993" ph="SELECT * FRO... user_cards1" />
+            <marker date="1508573424135" expanded="true" signature="969:1023" ph="SELECT * FRO... user_cards1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="76" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="7" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/cardOptions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="369" column="9" lean-forward="false" selection-start-line="369" selection-start-column="9" selection-end-line="369" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/loginforms/cardapi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="61" column="52" lean-forward="false" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
+          <folding>
+            <marker date="1508575695177" expanded="true" signature="976:1030" ph="SELECT * FRO... user_cards1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/loginforms/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="203" column="58" lean-forward="false" selection-start-line="203" selection-start-column="58" selection-end-line="203" selection-end-column="58" />
+          <folding>
+            <marker date="1508711255020" expanded="true" signature="747:751" ph="SELECT card " />
+            <marker date="1508711255020" expanded="true" signature="752:797" ph="Select the m... the" />
+            <marker date="1508711255020" expanded="true" signature="799:864" ph="SELECT * FRO... users" />
+            <marker date="1508711255020" expanded="true" signature="1122:1133" ph="..." />
+            <marker date="1508711255020" expanded="true" signature="2176:2264" ph="..." />
+            <marker date="1508711255020" expanded="true" signature="2316:2396" ph="..." />
+            <marker date="1508711255020" expanded="true" signature="2595:2621" ph="..." />
+            <marker date="1508711255020" expanded="true" signature="2602:2621" ph="..." />
+            <marker date="1508711255020" expanded="true" signature="3791:3818" ph="..." />
           </folding>
         </state>
       </provider>
