@@ -333,7 +333,7 @@ if(isset($_POST["card"])) {
 
             //Get card notes.
             let cardNotes = document.querySelector('#notes').value;
- 
+
             let _card = new Card(cardTitle, cardSubtitle, cardArmorClass, cardHitPoints, cardSpeed, cardSkills, cardSenses, cardLanguages, cardChallengeRating,
                 [cardStr, cardDex, cardCon, cardInt, cardWis, cardCha], cardAbilities, cardActions, cardReactions, cardLengendaryActions, cardNotes);
 
