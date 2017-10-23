@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a6b1736-fe66-4bf7-8bfe-29a0cdf6ccf4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public_html/js/card.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public_html/js/cardOptions.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/Tools/cardoptions.php" afterPath="$PROJECT_DIR$/public_html/Tools/cardoptions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public_html/js/card.js" afterPath="$PROJECT_DIR$/public_html/js/card.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +17,11 @@
       <file leaf-file-name="cardoptions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/Tools/cardoptions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="257" column="14" lean-forward="true" selection-start-line="257" selection-start-column="14" selection-end-line="257" selection-end-column="14" />
+            <state relative-caret-position="303">
+              <caret line="335" column="1" lean-forward="false" selection-start-line="335" selection-start-column="1" selection-end-line="335" selection-end-column="1" />
               <folding>
-                <marker date="1508716169925" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
-                <marker date="1508716169925" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
+                <marker date="1508728732967" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
+                <marker date="1508728732967" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
               </folding>
             </state>
           </provider>
@@ -32,21 +30,37 @@
       <file leaf-file-name="card.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/js/card.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="86" column="9" lean-forward="false" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <marker date="1508728721425" expanded="false" signature="12910:12923" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="12924:15606" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="12949:13066" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="13124:13467" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="13155:13234" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="13265:13347" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="13378:13456" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="13530:14428" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="13546:14417" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="13566:14400" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="13583:13775" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="13792:13805" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="13809:14379" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="14486:14834" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="14517:14598" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="14629:14713" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="14744:14823" ph="..." />
+                <marker date="1508728721425" expanded="false" signature="14924:14934" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="14935:15029" ph="..." />
+                <marker date="1508728721425" expanded="false" signature="15084:15094" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="15095:15184" ph="..." />
+                <marker date="1508728721425" expanded="false" signature="15240:15250" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="15251:15344" ph="..." />
+                <marker date="1508728721425" expanded="false" signature="15400:15410" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="15411:15520" ph="..." />
+                <marker date="1508728721425" expanded="true" signature="15530:15598" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DropDown.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/js/DropDown.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -137,12 +151,13 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>submit</find>
-      <find>alert</find>
       <find>200</find>
       <find>4</find>
       <find>Log Out</find>
       <find>List</find>
       <find>ajax</find>
+      <find>cal</find>
+      <find>alert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,8 +175,8 @@
         <option value="$PROJECT_DIR$/public_html/loginforms/cardapi.php" />
         <option value="$PROJECT_DIR$/public_html/loginforms/user.php" />
         <option value="$PROJECT_DIR$/public_html/js/cardOptions.js" />
-        <option value="$PROJECT_DIR$/public_html/Tools/cardoptions.php" />
         <option value="$PROJECT_DIR$/public_html/js/card.js" />
+        <option value="$PROJECT_DIR$/public_html/Tools/cardoptions.php" />
       </list>
     </option>
   </component>
@@ -172,10 +187,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.1" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="width" value="960" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -275,18 +290,18 @@
       <workItem from="1506754976520" duration="5958000" />
       <workItem from="1506963673655" duration="4413000" />
       <workItem from="1507391708980" duration="5641000" />
-      <workItem from="1507968633080" duration="23513000" />
+      <workItem from="1507968633080" duration="26357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82606000" />
+    <option name="totallyTimeSpent" value="85450000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20416667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.153125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -325,8 +340,8 @@
         <state relative-caret-position="4947">
           <caret line="291" column="46" lean-forward="false" selection-start-line="291" selection-start-column="46" selection-end-line="291" selection-end-column="46" />
           <folding>
-            <marker date="1508716169925" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
-            <marker date="1508716169925" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
+            <marker date="1508728732967" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
+            <marker date="1508728732967" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
           </folding>
         </state>
       </provider>
@@ -358,8 +373,8 @@
         <state relative-caret-position="4182">
           <caret line="251" column="38" lean-forward="false" selection-start-line="251" selection-start-column="38" selection-end-line="251" selection-end-column="38" />
           <folding>
-            <marker date="1508716169925" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
-            <marker date="1508716169925" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
+            <marker date="1508728732967" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
+            <marker date="1508728732967" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
           </folding>
         </state>
       </provider>
@@ -391,8 +406,8 @@
         <state relative-caret-position="3774">
           <caret line="222" column="21" lean-forward="false" selection-start-line="222" selection-start-column="21" selection-end-line="222" selection-end-column="21" />
           <folding>
-            <marker date="1508716169925" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
-            <marker date="1508716169925" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
+            <marker date="1508728732967" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
+            <marker date="1508728732967" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
           </folding>
         </state>
       </provider>
@@ -424,8 +439,8 @@
         <state relative-caret-position="4029">
           <caret line="237" column="19" lean-forward="true" selection-start-line="237" selection-start-column="19" selection-end-line="237" selection-end-column="19" />
           <folding>
-            <marker date="1508716169925" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
-            <marker date="1508716169925" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
+            <marker date="1508728732967" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
+            <marker date="1508728732967" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
           </folding>
         </state>
       </provider>
@@ -735,14 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/DropDown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/dice.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -759,16 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/js/card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/js/cardOptions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -777,13 +774,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/DropDown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/js/card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="86" column="9" lean-forward="false" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1508728721425" expanded="false" signature="12910:12923" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="12924:15606" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="12949:13066" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="13124:13467" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="13155:13234" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="13265:13347" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="13378:13456" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="13530:14428" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="13546:14417" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="13566:14400" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="13583:13775" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="13792:13805" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="13809:14379" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="14486:14834" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="14517:14598" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="14629:14713" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="14744:14823" ph="..." />
+            <marker date="1508728721425" expanded="false" signature="14924:14934" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="14935:15029" ph="..." />
+            <marker date="1508728721425" expanded="false" signature="15084:15094" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="15095:15184" ph="..." />
+            <marker date="1508728721425" expanded="false" signature="15240:15250" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="15251:15344" ph="..." />
+            <marker date="1508728721425" expanded="false" signature="15400:15410" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="15411:15520" ph="..." />
+            <marker date="1508728721425" expanded="true" signature="15530:15598" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/Tools/cardoptions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="257" column="14" lean-forward="true" selection-start-line="257" selection-start-column="14" selection-end-line="257" selection-end-column="14" />
+        <state relative-caret-position="303">
+          <caret line="335" column="1" lean-forward="false" selection-start-line="335" selection-start-column="1" selection-end-line="335" selection-end-column="1" />
           <folding>
-            <marker date="1508716169925" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
-            <marker date="1508716169925" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
+            <marker date="1508728732967" expanded="true" signature="489:549" ph="INSERT INTO user_cards1... " />
+            <marker date="1508728732967" expanded="true" signature="987:1051" ph="INSERT INTO user_cards1... " />
           </folding>
         </state>
       </provider>

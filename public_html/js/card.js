@@ -7,7 +7,7 @@
  * Class representing Card created by user.
  */
 export class Card {
-    constructor(title, subtitle, armorClass, hitPoints, speed, skills, senses, languages, challengeRating, scores, abilities, actions, reactions, legendaryActions) {
+    constructor(title, subtitle, armorClass, hitPoints, speed, skills, senses, languages, challengeRating, scores, abilities, actions, reactions, legendaryActions, notes) {
         this.title = title;
         this.subtitle = subtitle;
         this.armorClass = armorClass;
@@ -17,6 +17,7 @@ export class Card {
         this.senses = senses;
         this.languages = languages;
         this.challengeRating = challengeRating;
+        this.notes = notes;
 
         //Set Ability scores.
         this.setAbilityScores(scores);
@@ -84,7 +85,6 @@ export class Card {
         if(target === null){
             throw "Card render target element not found.";
         }
-        alert('render called');
 
         //Create the container for entire card.
         let cardContainer = document.createElement("div");
@@ -115,15 +115,35 @@ export class Card {
         secondaryCardStats.appendChild(generateStatElement('Languages', this.languages));
         secondaryCardStats.appendChild(generateStatElement('CR', this.challengeRating));
 
+        //Create and append card notes.
+        let cardNotesContainer = document.createElement('div');
+        cardNotesContainer.setAttribute('class', 'propertyblock');
+        cardNotesContainer.setAttribute('style', 'width:100%');
+        let cardNotesTitle = document.createElement('div');
+        cardNotesTitle.setAttribute('class', 'title');
+        cardNotesTitle.textContent = 'Notes';
+        let cardNotes = document.createElement('p');
+        cardNotes.textContent = this.notes;
+        cardNotesContainer.appendChild(cardNotesTitle);
+        cardNotesContainer.appendChild(cardNotes);
+
+        let appendableTitle = document.createElement('div');
+        appendableTitle.setAttribute('class', 'title');
 
         //Append everything to container.
         cardContainer.appendChild(cardHead);
-        cardContainer.append(document.createElement('tapered-rule'));
+        cardContainer.appendChild(document.createElement('tapered-rule'));
         cardContainer.appendChild(generalCardStats);
         cardContainer.appendChild(generateAbilityTable(this.scores));
-        cardContainer.append(document.createElement('tapered-rule'));
-        cardContainer.append(secondaryCardStats);
-        cardContainer.append(document.createElement('tapered-rule'));
+        cardContainer.appendChild(document.createElement('tapered-rule'));
+        cardContainer.appendChild(secondaryCardStats);
+        cardContainer.appendChild(document.createElement('tapered-rule'));
+        cardContainer.appendChild(generateAppendableProperty('Abilities', this.abilities));
+        cardContainer.appendChild(generateAppendableProperty('Actions', this.actions));
+        cardContainer.appendChild(generateAppendableProperty('Reactions', this.reactions));
+        cardContainer.appendChild(generateAppendableProperty('Legendary Actions', this.legendaryActions));
+        cardContainer.appendChild(document.createElement('tapered-rule'));
+        cardContainer.appendChild(cardNotesContainer);
 
         target.appendChild(cardContainer);
 
@@ -148,23 +168,45 @@ export class Card {
             return statContainer;
         }
 
+        /**
+         * Generate element containing appendable properties.
+         * @param title Name of appendable properties.
+         * @param appendableProperties Array of appendable properties.
+         * @returns {Element} HTML element containing appendable properties.
+         */
         function generateAppendableProperty(title, appendableProperties){
-            let appendableProperty = document.createElement('div');
-            appendableProperty.setAttribute('class', 'propertyblock');
-            appendableProperty.setAttribute('style', 'width:100%');
+            let appendablesContainer = document.createElement('div');
+            appendablesContainer.setAttribute('class', 'propertyblock');
+            appendablesContainer.setAttribute('style', 'width:100%');
 
             let appendableTitle = document.createElement('div');
             appendableTitle.setAttribute('class', 'title');
             appendableTitle.textContent = title;
 
-            //TODO: ---- STOPPED HERE ---
-            //TODO: Iterate through appendableProperties and add element for each.
+            appendablesContainer.appendChild(appendableTitle);
+
+            appendableProperties.forEach((property)=>{
+               let appendableContainer = document.createElement('div');
+
+               let appendableName = document.createElement('h4');
+               appendableName.textContent = property.name;
+
+               let appendableDescription = document.createElement('p');
+               appendableDescription.textContent = property.desc;
+
+               appendableContainer.appendChild(appendableName);
+               appendableContainer.appendChild(appendableDescription);
+
+               appendablesContainer.appendChild(appendableContainer);
+            });
+
+            return appendablesContainer;
         }
 
         /**
          * Nested function for generating table element for containing all ability scores.
-         * @param abilityScores
-         * @returns {Element}
+         * @param abilityScores Array containing ability scores.
+         * @returns {Element} HTML table element containing all of the Ability Scores.
          */
         function generateAbilityTable(abilityScores){
             let abilityTableContainer = document.createElement('div');
@@ -203,32 +245,32 @@ export class Card {
             let strData = document.createElement('td');
             strData.setAttribute('id','str');
             let strValue = document.createElement('span');
-            strValue.textContent = abilityScores.str;
+            strValue.textContent = `${abilityScores.str}(${calculateModifier(abilityScores.str)})`;
             strData.appendChild(strValue);
             let dexData = document.createElement('td');
             dexData.setAttribute('id', 'dex');
             let dexValue = document.createElement('span');
-            dexValue.textContent= abilityScores.dex;
+            dexValue.textContent= `${abilityScores.dex}(${calculateModifier(abilityScores.dex)})`;
             dexData.appendChild(dexValue);
             let conData = document.createElement('td');
             conData.setAttribute('id', 'con');
             let conValue = document.createElement('span');
-            conValue.textContent = abilityScores.con;
+            conValue.textContent = `${abilityScores.con}(${calculateModifier(abilityScores.con)})`;
             conData.appendChild(conValue);
             let intData = document.createElement('td');
             intData.setAttribute('id', 'int');
             let intValue = document.createElement('span');
-            intValue.textContent = abilityScores.int;
+            intValue.textContent = `${abilityScores.int}(${calculateModifier(abilityScores.int)})`;
             intData.appendChild(intValue);
             let wisData = document.createElement('td');
             wisData.setAttribute('id', 'wis');
             let wisValue = document.createElement('span');
-            wisValue.textContent = abilityScores.wis;
+            wisValue.textContent = `${abilityScores.wis}(${calculateModifier(abilityScores.wis)})`;
             wisData.appendChild(wisValue);
             let chaData = document.createElement('td');
             chaData.setAttribute('id', 'cha');
             let chaValue = document.createElement('span');
-            chaValue.textContent = abilityScores.cha;
+            chaValue.textContent = `${abilityScores.cha}(${calculateModifier(abilityScores.cha)})`;
             chaData.appendChild(chaValue);
             valueRow.appendChild(strData);
             valueRow.appendChild(dexData);
@@ -238,11 +280,25 @@ export class Card {
             valueRow.appendChild(chaData);
             tableBody.appendChild(valueRow);
 
-
             abilityTable.appendChild(tableBody);
             abilityTableContainer.appendChild(abilityTable);
 
             return abilityTableContainer;
+
+            /**
+             * Nested function to calculate modifier.
+             * @param statTotal
+             * @returns {*}
+             */
+            function calculateModifier(statTotal){
+                if (typeof(statTotal)!=='number') statTotal = parseInt(statTotal);
+                let statMod = Math.floor((statTotal - 10) / 2);
+                if(statMod > 0 ){
+                    return `+${statMod}`;
+                } else {
+                    return statMod;
+                }
+            }
         }
     }
 }

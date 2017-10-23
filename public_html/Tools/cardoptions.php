@@ -244,88 +244,7 @@ if(isset($_POST["card"])) {
 </div>
 <!-- Experimental spot for Card rendering target -->
 <div id="card_target"></div>
-<!-- Card Tool -->
-<div id="card_wrap" style="display: none">
-    <div id="card_head">
-        <h1 id="card_title">CARD TITLE</h1>
-        <h2 id="card_subtitle">Some Creature (some size)</h2>
-    </div>
-    <tapered-rule></tapered-rule>
-    <div class="stats">
-        <div class="statline">
-            <h4>Armor Class:</h4>
-            <p id="AC">10</p>
-        </div>
-        <div class="statline">
-            <h4>Hit Points:</h4>
-            <p id="hp">2(1d4)</p>
-        </div>
-        <div class="statline">
-            <h4>Speed:</h4>
-            <p id="speed">fast</p>
-        </div>
-    </div>
-    <tapered-rule></tapered-rule>
-    <div class="abilstable">
-        <table>
-            <tbody>
-            <tr>
-                <th>STR</th>
-                <th>DEX</th>
-                <th>CON</th>
-                <th>INT</th>
-                <th>WIS</th>
-                <th>CHA</th>
-            </tr>
-            <tr>
-            <tr>
-                <td id="str"><span id="str_total"></span> (<span id="str_mod"></span>)</td>
-                <td id="dex"><span id="dex_total"></span> (<span id="dex_mod"></span>)</td>
-                <td id="con"><span id="con_total"></span> (<span id="con_mod"></span>)</td>
-                <td id="int"><span id="int_total"></span> (<span id="int_mod"></span>)</td>
-                <td id="wis"><span id="wis_total"></span> (<span id="wis_mod"></span>)</td>
-                <td id="cha"><span id="cha_total"></span> (<span id="cha_mod"></span>)</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <tapered-rule></tapered-rule>
-    <div class="stats">
-        <div class="statline">
-            <h4>Senses:</h4>
-            <p id="senses">Sight</p>
-        </div>
-        <div class="statline">
-            <h4>Languages:</h4>
-            <p id="lang">English</p>
-        </div>
-        <div class="statline">
-            <h4>CR:</h4>
-            <p id="cr">Easy (1 XP)</p>
-        </div>
-    </div>
-    <tapered-rule></tapered-rule>
-    <div class="propertyblock" id="abils_list" style="width:100%">
-        <div class="title">Abilities.</div>
-        <!-- Insert abilities here -->
-    </div>
-    <div class="propertyblock" id="acts_list" style="width:100%">
-        <div class="title">Actions</div>
-        <!-- Insert actions here -->
-    </div>
-    <div class="propertyblock" id="racts_list" style="width:100%">
-        <div class="title">Reactions</div>
-        <!-- Insert reactions here -->
-    </div>
-    <div class="propertyblock" id="lacts_list" style="width:100%">
-        <div class="title">Legendary Actions</div>
-        <!-- Insert legendary actions here -->
-    </div>
-    <div>
-        <button id="send-button">TEST AJAX CALL</button>
-    </div>
 
-</div>
 <!-- Scripts -->
 <script type="module">
     import {Card} from '../js/card.js';
@@ -353,8 +272,6 @@ if(isset($_POST["card"])) {
     const CARD_REACTION = '.ract';
     const CARD_LEGENDARY_ACTIONS = '#lacts_list';
     const CARD_LEGENDARY_ACTION = '.lact';
-    const CARD_WRAPPER = '#card_wrap';
-
 
     (function () {
         // Initialize elements
@@ -414,30 +331,18 @@ if(isset($_POST["card"])) {
                 return {name:legendaryActionName, desc: legendaryActionDesc};
             });
 
-
+            //Get card notes.
+            let cardNotes = document.querySelector('#notes').value;
+ 
             let _card = new Card(cardTitle, cardSubtitle, cardArmorClass, cardHitPoints, cardSpeed, cardSkills, cardSenses, cardLanguages, cardChallengeRating,
-                [cardStr, cardDex, cardCon, cardInt, cardWis, cardCha], cardAbilities, cardActions, cardReactions, cardLengendaryActions);
+                [cardStr, cardDex, cardCon, cardInt, cardWis, cardCha], cardAbilities, cardActions, cardReactions, cardLengendaryActions, cardNotes);
 
             try{
                 _card.render("#card_target");
+                //document.querySelector('#options').setAttribute('style', 'none');
             } catch (e){
                 console.error(e);
             }
-
-//            //Generate card using user options.
-//            try {
-//                generateCard(_card);
-//                //hide options, show card
-//                let cardOptions = document.querySelector('#options');
-//                cardOptions.setAttribute('style', 'display: none');
-//                let cardWrapper = document.querySelector('#card_wrap');
-//                cardWrapper.setAttribute('style','');
-//                document.querySelector('#send-button').addEventListener('click', (evt)=>{
-//                    saveCard(_card);
-//                });
-//            } catch (e){
-//                console.error(e);
-//            }
         });
 
         /**
@@ -551,143 +456,6 @@ if(isset($_POST["card"])) {
         appendableContainer.appendChild(descriptionInput);
 
         existingContainer.appendChild(appendableContainer);
-    };
-
-    /**
-     * Fill the generic card template with attributes provided by a Card object.
-     *
-     * @param card Card object created using user's inputs in the Card Option tools.
-     */
-    let generateCard = (card) =>{
-        let cardWrapper = document.querySelector(CARD_WRAPPER);
-
-        //Find elements to insert data into card.
-        let cardTitle = cardWrapper.querySelector('#card_title');
-        let cardSubtitle = cardWrapper.querySelector('#card_subtitle');
-        let cardArmorClass = cardWrapper.querySelector('#AC');
-        let cardHitPoints = cardWrapper.querySelector('#hp');
-        let cardSpeed = cardWrapper.querySelector('#speed');
-        let cardStrTotal = cardWrapper.querySelector('#str_total');
-        let cardStrMod = cardWrapper.querySelector('#str_mod');
-        let cardDexTotal = cardWrapper.querySelector('#dex_total');
-        let cardDexMod = cardWrapper.querySelector('#dex_mod');
-        let cardConTotal = cardWrapper.querySelector('#con_total');
-        let cardConMod = cardWrapper.querySelector('#con_mod');
-        let cardIntTotal = cardWrapper.querySelector('#int_total');
-        let cardIntMod = cardWrapper.querySelector('#int_mod');
-        let cardWisTotal = cardWrapper.querySelector('#wis_total');
-        let cardWisMod = cardWrapper.querySelector('#wis_mod');
-        let cardChaTotal = cardWrapper.querySelector('#cha_total');
-        let cardChaMod = cardWrapper.querySelector('#cha_mod');
-
-        //Insert data into card elements.
-        try{
-            cardTitle.innerText = card.title;
-            cardSubtitle.innerText = card.subtitle;
-
-            cardArmorClass.innerText = card.armorClass;
-            cardHitPoints.innerText = card.hitPoints;
-            cardSpeed.innerText = card.cardSpeed;
-
-            cardStrTotal.innerText = card.scores.str;
-            cardStrMod.innerText = calculateModifier(card.scores.str);
-            cardDexTotal.innerText = card.scores.dex;
-            cardDexMod.innerText = calculateModifier(card.scores.dex);
-            cardConTotal.innerText = card.scores.con;
-            cardConMod.innerText = calculateModifier(card.scores.con);
-            cardIntTotal.innerText = card.scores.int;
-            cardIntMod.innerText = calculateModifier(card.scores.int);
-            cardWisTotal.innerText = card.scores.wis;
-            cardWisMod.innerText = calculateModifier(card.scores.wis);
-            cardChaTotal.innerText = card.scores.cha;
-            cardChaMod.innerText = calculateModifier(card.scores.cha);
-
-            // Add each ability.
-            card.abilities.forEach((ability)=>{
-                let cardAbilityContainer = document.createElement('div');
-                cardAbilityContainer.setAttribute('class', 'abil_name');
-
-                let cardAbilityName = document.createElement('h4');
-                cardAbilityName.appendChild(document.createTextNode(ability.name));
-
-                let cardAbilityDesc = document.createElement('p');
-                cardAbilityDesc.appendChild(document.createTextNode(ability.desc));
-
-                cardAbilityContainer.appendChild(cardAbilityName);
-                cardAbilityContainer.appendChild(cardAbilityDesc);
-
-                //Append generated ability container to document.
-                cardWrapper.querySelector('#abils_list').appendChild(cardAbilityContainer);
-            });
-
-            // Add each action.
-            card.actions.forEach((action)=>{
-                let cardActionContainer = document.createElement('div');
-
-                let cardActionName = document.createElement('h4');
-                cardActionName.appendChild(document.createTextNode(action.name));
-
-                let cardActionDesc = document.createElement('p');
-                cardActionDesc.appendChild(document.createTextNode(action.desc));
-
-                cardActionContainer.appendChild(cardActionName);
-                cardActionContainer.appendChild(cardActionDesc);
-
-                //Append generated action container to document.
-                cardWrapper.querySelector('#acts_list').appendChild(cardActionContainer);
-            });
-
-            // Add each reaction.
-            card.reactions.forEach((reaction)=>{
-                let cardReactionContainer = document.createElement('div');
-
-                let cardReactionName = document.createElement('h4');
-                cardReactionName.appendChild(document.createTextNode(reaction.name));
-
-                let cardReactionDesc = document.createElement('p');
-                cardReactionDesc.appendChild(document.createTextNode(reaction.desc));
-
-                cardReactionContainer.appendChild(cardReactionName);
-                cardReactionContainer.appendChild(cardReactionDesc);
-
-                //Append generated reaction container to document
-                cardWrapper.querySelector('#racts_list').appendChild(cardReactionContainer);
-            });
-
-            // Add each legendary action
-            card.legendaryActions.forEach((lAction)=>{
-                let cardLActionContainer = document.createElement('div');
-
-                let cardLActionName = document.createElement('h4');
-                cardLActionName.appendChild(document.createTextNode(lAction.name));
-
-                let cardLActionDesc = document.createElement('p');
-                cardLActionDesc.appendChild(document.createTextNode(lAction.desc));
-
-                cardLActionContainer.appendChild(cardLActionName);
-                cardLActionContainer.appendChild(cardLActionDesc);
-
-                //Append generated legendary container to document.
-                cardWrapper.querySelector('#lacts_list').appendChild(cardLActionContainer);
-            })
-
-        } catch(e){
-            throw e;
-        }
-
-        /**
-         * Nested function to calculate modifier.
-         */
-        function calculateModifier(statTotal){
-            //TODO: This should round DOWN. For now will allow halves.
-            if (typeof(statTotal)!=='number') statTotal = parseInt(statTotal);
-            let statMod = (statTotal - 10) / 2;
-            if(statMod > 0 ){
-                return `+${statMod}`;
-            } else {
-                return statMod;
-            }
-        }
     };
 
     /**
