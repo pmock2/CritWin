@@ -6,6 +6,35 @@
  * Time: 11:47 PM
  */
 include("header.php");
+//include_once("check_login_status.php");
+//if(ISSET($_POST["card"])){
+    //echo 'This is a test';
+//    include_once("db_conx.php");
+    //TODO: Add a regex that replaces characters NOT needed in a JSON object.
+    //$card = preg_replace('#[^a-z0-9]#i', '', $_POST("card"));
+//    $c = $_POST('card');
+    //$u = $_SESSION('u');
+//    $u = "devTesting";
+//    $sql = "INSERT INTO user_cards1 (username, card) VALUES ('$u', '$c')";
+//    $query = mysqli_query($db_conx, $sql);
+//    echo "Sent input to card.";
+//    exit();
+
+if(isset($_POST["card"])) {
+    include_once("db_conx.php");
+//    TODO Add a preg_replace to the JSON input.
+//    $input = preg_replace('#[^a-z0-9]#i', '', $_POST['card']);
+    $input = $_POST["card"];
+    if(isset($_SESSION['usernamßßßße'])){
+        $u = $_SESSION['username'];
+    } else {
+        $u = 'no_username';
+    }
+    $sql = "INSERT INTO user_cards1 (username, card) VALUES ('$u', '$input')";
+    $query = mysqli_query($db_conx, $sql);
+    echo "Sent $input to database as card";
+    exit();
+}
 ?>
 <html>
 <head>
@@ -67,6 +96,7 @@ include("header.php");
 <body>
 <?php echo $header ?>
 <body>
+<!-- Card Options -->
 <div id="options">
     <section class='aboutus' id='about'>
         <div class='container1'>
@@ -88,6 +118,19 @@ include("header.php");
                     <h3>Subtitle</h3>
                     <input style="font-style: italic; width: 100%" type="text" class="form-control" id="subtitle"
                            placeholder="Small humanoid (goblinoid), neutral evil" name="subtitle">
+                </div>
+                <hr>
+                <div class="form-group">
+                    <h3>Armor Class</h3>
+                    <input type="number" class="form-control" id="armorclass" placeholder="10" name="armorclass">
+                </div>
+                <div class="form-group">
+                    <h3>Hit Points</h3>
+                    <input type="text" class="form-control" id="hitpoints" placeholder="2(1d4)" name="hitpoints">
+                </div>
+                <div class="form-group">
+                    <h3>Speed</h3>
+                    <input type="text" class="form-control" id="speed" placeholder="fast" name="speed">
                 </div>
                 <hr>
                 <h3>Ability Scores</h3>
@@ -142,88 +185,48 @@ include("header.php");
                            name="cr">
                 </div>
                 <hr>
-                <div class="form-group">
+                <div id="abils-group" class="form-group">
                     <h3>Abilities</h3>
                     <div id="abils_list">
-                        Name:
-                        <input style="width: 100%; font-weight: bold; font-style: italic;" type="text"
-                               class="form-control"
-                               id="abils_name0" placeholder="Nimble Escape" name="abils_name0">
-                        Description:
-                        <input style="width: 100%;" type="text" class="form-control" id="abils_des0"
-                               placeholder="The goblin can take the Disengage or Hide action as a bonus action on each of its turns."
-                               name="abils_des0">
+                        <!-- Abilities inserted here with javascript -->
                     </div>
                     <br>
                     <div class="addbtn">
                         <span class="glyphicon glyphicon-plus" style="font-size: 25px;top: 5px; left: 6px"></span>
-                    </div>
-                    <div class="minbtn">
-                        <span class="glyphicon glyphicon-minus" style="font-size: 25px;top: 5px; left: 4px"></span>
                     </div>
                 </div>
                 <hr>
-                <div class="form-group">
+                <div id="acts-group" class="form-group">
                     <h3>Actions</h3>
                     <div id="acts_list">
-                        Name:
-                        <input style="width: 100%; font-weight: bold; font-style: italic;" type="text"
-                               class="form-control"
-                               id="acts_name0" placeholder="Scimitar" name="acts_name0">
-                        Description:
-                        <input style="width: 100%;" type="text" class="form-control" id="acts_des0"
-                               placeholder="Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) slashing damage."
-                               name="acts_des0">
+                        <!-- Actions inserted here with javascript -->
                     </div>
                     <br>
                     <div class="addbtn">
                         <span class="glyphicon glyphicon-plus" style="font-size: 25px;top: 5px; left: 6px"></span>
-                    </div>
-                    <div class="minbtn">
-                        <span class="glyphicon glyphicon-minus" style="font-size: 25px;top: 5px; left: 4px"></span>
                     </div>
                 </div>
                 <hr>
 
-                <div class="form-group">
+                <div id="racts-group" class="form-group">
                     <h3>Reactions</h3>
-                    <div id="acts_list">
-                        Name:
-                        <input style="width: 100%; font-weight: bold; font-style: italic;" type="text"
-                               class="form-control"
-                               id="reacts_name0" placeholder="Reaction" name="reacts_name0">
-                        Description:
-                        <input style="width: 100%;" type="text" class="form-control" id="reacts_des0"
-                               placeholder="Reaction Description"
-                               name="reacts_des0">
+                    <div id="racts_list">
+                        <!-- Reactions inserted here with javascript -->
                     </div>
                     <br>
                     <div class="addbtn">
                         <span class="glyphicon glyphicon-plus" style="font-size: 25px;top: 5px; left: 6px"></span>
-                    </div>
-                    <div class="minbtn">
-                        <span class="glyphicon glyphicon-minus" style="font-size: 25px;top: 5px; left: 4px"></span>
                     </div>
                 </div>
                 <hr>
-                <div class="form-group">
+                <div id="lacts-group" class="form-group">
                     <h3>Legendary Actions</h3>
-                    <div id="acts_list">
-                        Name:
-                        <input style="width: 100%; font-weight: bold; font-style: italic;" type="text"
-                               class="form-control"
-                               id="legacts_name0" placeholder="Legendary Action" name="legacts_name0">
-                        Description:
-                        <input style="width: 100%;" type="text" class="form-control" id="legacts_des0"
-                               placeholder="Legendary Action Description"
-                               name="legacts_des0">
+                    <div id="lacts_list">
+                        <!-- Legendary Actions inserted here with javascript -->
                     </div>
                     <br>
                     <div class="addbtn">
                         <span class="glyphicon glyphicon-plus" style="font-size: 25px;top: 5px; left: 6px"></span>
-                    </div>
-                    <div class="minbtn">
-                        <span class="glyphicon glyphicon-minus" style="font-size: 25px;top: 5px; left: 4px"></span>
                     </div>
                 </div>
                 <hr>
@@ -234,99 +237,252 @@ include("header.php");
                 </div>
                 <hr>
 
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button id='card-submit-btn' class="btn btn-default">Submit</button>
             </form>
         </div>
     </section>
 </div>
+<!-- Experimental spot for Card rendering target -->
+<div id="card_target"></div>
 
-<div id="card_wrap" style="display: none">
-    <div id="card_head">
-        <h1>CARD TITLE</h1>
-        <h2>Some Creature (some size)</h2>
-    </div>
-    <tapered-rule></tapered-rule>
-    <div class="stats">
-        <div class="statline">
-            <h4>Armor Class:</h4>
-            <p id="AC">10</p>
-        </div>
-        <div class="statline">
-            <h4>Hit Points:</h4>
-            <p id="hp">2(1d4)</p>
-        </div>
-        <div class="statline">
-            <h4>Speed:</h4>
-            <p id="speed">fast</p>
-        </div>
-    </div>
-    <tapered-rule></tapered-rule>
-    <div class="abilstable">
-        <table>
-            <tbody>
-            <tr>
-                <th>STR</th>
-                <th>DEX</th>
-                <th>CON</th>
-                <th>INT</th>
-                <th>WIS</th>
-                <th>CHA</th>
-            </tr>
-            <tr>
-            <tr>
-                <td id="str">10 (+0)</td>
-                <td id="dex">10 (+0)</td>
-                <td id="con">10 (+0)</td>
-                <td id="int">10 (+0)</td>
-                <td id="wis">10 (+0)</td>
-                <td id="cha">10 (+0)</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <tapered-rule></tapered-rule>
-    <div class="stats">
-        <div class="statline">
-            <h4>Senses:</h4>
-            <p id="senses">Sight</p>
-        </div>
-        <div class="statline">
-            <h4>Languages:</h4>
-            <p id="lang">English</p>
-        </div>
-        <div class="statline">
-            <h4>CR:</h4>
-            <p id="cr">Easy (1 XP)</p>
-        </div>
-    </div>
-    <tapered-rule></tapered-rule>
-    <div class="propertyblock" id="abils_list">
-        <h4 id="abil1_name">Ability.</h4>
-        <p id="abil1_descript">This is an ability </p>
-    </div>
-    <div class="propertyblock">
-        <div class="title">Actions</div>
-        <h4 id="atk1_name">Weapon Attack.</h4>
-        <p id="atk1_descript">Description. This is a very long description that takes several lines to show the whole
-            thing</p>
-    </div>
-    <div class="propertyblock">
-        <div class="title">Reactions</div>
-        <h4 id="rectn1_name">Reaction.</h4>
-        <p id="rectn1_descript">Description. This is a very long description that takes several lines to show the whole
-            thing</p>
-    </div>
-    <div class="propertyblock">
-        <div class="title">Legendary Actions</div>
-        <p id="lgn1_descript">The monster can take 3 legendary actions, choosing from the options below. Only one
-            legendary action can be
-            used at a time and only at the end of another creature's turn. The monster regains spent legendary actions
-            at the start of its turn.</p>
-        <h4 id="lgnd1_name">Legendary.</h4>
-        <p id="atk1_descript">Description. This is a very long description that takes several lines to show the whole
-            thing</p>
-    </div>
-</div>
+<!-- Scripts -->
+<script type="module">
+    import {Card} from '../js/card.js';
 
+    /** Constants **/
+//CSS Selectors
+    const CARD_SUBMIT_BUTTON = '#card-submit-btn';
+    const CARD_TITLE = '#title';
+    const CARD_SUBTITLE = '#subtitle';
+    const CARD_SKILLS = '#skills';
+    const CARD_SENSES = '#senses';
+    const CARD_LANGUAGES = '#languages';
+    const CARD_CHALLENGERATING = '#cr';
+    const CARD_STR = '#str';
+    const CARD_DEX = '#dex';
+    const CARD_CON = '#con';
+    const CARD_INT = '#int';
+    const CARD_WIS = '#wis';
+    const CARD_CHA = '#cha';
+    const CARD_ABILITIES = '#abils_list';
+    const CARD_ABILITY = '.abil';
+    const CARD_ACTIONS = '#acts_list';
+    const CARD_ACTION = '.act';
+    const CARD_REACTIONS = '#racts_list';
+    const CARD_REACTION = '.ract';
+    const CARD_LEGENDARY_ACTIONS = '#lacts_list';
+    const CARD_LEGENDARY_ACTION = '.lact';
+
+    (function () {
+        // Initialize elements
+        let submitButton = document.querySelector(CARD_SUBMIT_BUTTON);
+
+        /**
+         * Adds Event Listener to submitButton.
+         * For now, only being used to help test query selectors and model JSON object to be exported.
+         */
+        submitButton.addEventListener('click', (evt) => {
+
+            evt.preventDefault();
+            // Get all information from forms
+            let cardTitle = document.querySelector(CARD_TITLE).value;
+            let cardSubtitle = document.querySelector(CARD_SUBTITLE).value;
+            let cardSkills = document.querySelector(CARD_SKILLS).value;
+            let cardSenses = document.querySelector(CARD_SENSES).value;
+            let cardLanguages = document.querySelector(CARD_LANGUAGES).value;
+            let cardChallengeRating = document.querySelector(CARD_CHALLENGERATING).value;
+            let cardStr = document.querySelector(CARD_STR).value;
+            let cardDex = document.querySelector(CARD_DEX).value;
+            let cardCon = document.querySelector(CARD_CON).value;
+            let cardInt = document.querySelector(CARD_INT).value;
+            let cardWis = document.querySelector(CARD_WIS).value;
+            let cardCha = document.querySelector(CARD_CHA).value;
+            let cardArmorClass = document.querySelector('#armorclass').value;
+            let cardHitPoints = document.querySelector('#hitpoints').value;
+            let cardSpeed = document.querySelector('#speed').value;
+
+            //Get all card abilities.
+            let cardAbilities = [...document.querySelectorAll(CARD_ABILITY)].map((ability)=>{
+                //TODO: Null check might be needed in this position for each of the appendable attributes.
+                let abilityName = ability.querySelector('.appendable_name').value;
+                let abilityDesc = ability.querySelector('.appendable_desc').value;
+                return {name: abilityName, desc: abilityDesc};
+            });
+
+            //Get all card actions.
+            let cardActions = [...document.querySelectorAll(CARD_ACTION)].map((action)=>{
+                let actionName = action.querySelector('.appendable_name').value;
+                let actionDesc = action.querySelector('.appendable_desc').value;
+                return { name:actionName, desc: actionDesc};
+            });
+
+
+            //Get all card reactions.
+            let cardReactions = [...document.querySelectorAll(CARD_REACTION)].map((reaction)=>{
+                let reactionName = reaction.querySelector('.appendable_name').value;
+                let reactionDesc = reaction.querySelector('.appendable_desc').value;
+                return {name: reactionName, desc: reactionDesc};
+            });
+
+            //Get all card Legendary Actions.
+            let cardLengendaryActions = [...document.querySelectorAll(CARD_LEGENDARY_ACTION)].map((legendaryAction)=>{
+                let legendaryActionName = legendaryAction.querySelector('.appendable_name').value;
+                let legendaryActionDesc = legendaryAction.querySelector('.appendable_desc').value;
+                return {name:legendaryActionName, desc: legendaryActionDesc};
+            });
+
+            //Get card notes.
+            let cardNotes = document.querySelector('#notes').value;
+
+            let _card = new Card(cardTitle, cardSubtitle, cardArmorClass, cardHitPoints, cardSpeed, cardSkills, cardSenses, cardLanguages, cardChallengeRating,
+                [cardStr, cardDex, cardCon, cardInt, cardWis, cardCha], cardAbilities, cardActions, cardReactions, cardLengendaryActions, cardNotes);
+
+            try{
+                _card.render("#card_target");
+                //document.querySelector('#options').setAttribute('style', 'none');
+            } catch (e){
+                console.error(e);
+            }
+        });
+
+        /**
+         * Add event listener to buttons that add Name/Description elements.
+         */
+        document.querySelectorAll('.addbtn').forEach((addButton)=>{
+            addButton.addEventListener('click', (evt)=>{
+                let formGroup = null;
+                let parentElement = evt.srcElement.parentNode;
+
+                //If glyph is clicked, the containing div will be parent instead of formgroup. Formgroup is needed to determine anchor for appendable.
+                if(parentElement.getAttribute('class')==='addbtn'){
+                    formGroup = parentElement.parentNode;
+                } else {
+                    formGroup = parentElement;
+                }
+
+                // Verify form group is found.
+                if(formGroup.getAttribute('class')!== 'form-group'){
+                    console.error(`Unable to find form-group. Class found ${formGroup.getAttribute('class')}`);
+                    return;
+                }
+
+                addAppendable(formGroup.getAttribute('id'));
+            })
+        });
+    })();
+
+    /**
+     * Create and append elements to existing element.
+     * Used for creating new inputs when adding new Ability, Action, Reactions, Legendary Actions
+     *
+     *
+     * @param elementType must be 'abils-group', 'acts-group', 'racts-group', or 'lacts-group'.
+     * 'abils-group' -- Abilities
+     * 'acts-group'  -- Actions
+     * 'racts-group' -- Reactions
+     * 'lacts-group' -- Legendary Actions
+     */
+    let addAppendable = (elementType) =>{
+        const ABILITY_GROUP = 'abils-group';
+        const ACTION_GROUP = 'acts-group';
+        const REACTION_GROUP = 'racts-group';
+        const LEGENDARY_ACTIONS_GROUP = 'lacts-group';
+
+        let existingContainer = null;
+        let appendableType = null;
+
+        //Append created container to existing.
+        switch(elementType){
+            case ABILITY_GROUP:
+                existingContainer = document.querySelector(CARD_ABILITIES);
+                appendableType = 'abil';
+                break;
+            case ACTION_GROUP:
+                existingContainer = document.querySelector(CARD_ACTIONS);
+                appendableType = 'act';
+                break;
+            case REACTION_GROUP:
+                existingContainer = document.querySelector(CARD_REACTIONS);
+                appendableType = 'ract';
+                break;
+            case LEGENDARY_ACTIONS_GROUP:
+                existingContainer = document.querySelector(CARD_LEGENDARY_ACTIONS);
+                appendableType = 'lact';
+                break;
+            default:
+                existingContainer = null;
+        }
+
+        if(existingContainer===null){
+            console.error('Invalid element type passed into addAppendable()');
+            return;
+        }
+
+        // Create DIV that will hold entire object.
+        let appendableContainer = document.createElement('div');
+        appendableContainer.setAttribute('class', 'appendableAttr');
+        appendableContainer.setAttribute('class', appendableType);
+        //TODO: Need to check and append number to provide unique ID.
+        appendableContainer.setAttribute('style', 'border: 1px solid black; margin:10px; padding: 10px;');
+
+        //Create close button and append it to container.
+        //TODO: Add styling for button hover and button click.
+        //let closeButtonContainer = document.createElement('div');
+        let closeButton = document.createElement('span');
+        closeButton.setAttribute('class', 'glyphicon glyphicon-minus-sign');
+        closeButton.setAttribute('style', 'float:right');
+        closeButton.addEventListener('click',(evt)=>{
+            let spanParent = evt.srcElement.parentNode;
+            spanParent.parentNode.removeChild(spanParent);
+        });
+        //closeButtonContainer.appendChild(closeButton);
+        //closeButtonContainer.setAttribute('style','float:right');
+        appendableContainer.appendChild(closeButton);
+
+        //Create Name input and append it to container.
+        appendableContainer.appendChild(document.createTextNode('Name: '));
+        let nameInput = document.createElement('input');
+        nameInput.setAttribute('style', 'width: 100%; font-weight: bold; font-style: italic;');
+        nameInput.setAttribute('class', 'form-control appendable_name');
+        nameInput.setAttribute('type', 'text');
+        appendableContainer.appendChild(nameInput);
+
+        //Create Description input and append it to container.
+        appendableContainer.appendChild(document.createTextNode('Description: '));
+        let descriptionInput = document.createElement('input');
+        descriptionInput.setAttribute('style', 'width: 100%; font-weight: bold; font-style: italic;');
+        descriptionInput.setAttribute('class', 'form-control appendable_desc');
+        descriptionInput.setAttribute('type', 'text');
+        appendableContainer.appendChild(descriptionInput);
+
+        existingContainer.appendChild(appendableContainer);
+    };
+
+    /**
+     * Save card to database.
+     * @param card Object of Card Class.
+     */
+    function saveCard(card){
+        let cardJSON = JSON.stringify(card.toJSON());
+        let ajax = ajaxObj('POST', 'cardoptions.php');
+
+        ajax.onreadystatechange = function(){
+            if(ajaxReturn(ajax) === true){
+                alert('ajax returned true');
+            }
+
+        };
+
+        ajax.send(`card=${cardJSON}`);
+    }
+
+    function ajaxReturn(x) {
+        if (x.readyState === 4 && x.status === 200) {
+            return true;
+        }
+    }
+
+</script>
+<!--         -->
 </body>
 </html>

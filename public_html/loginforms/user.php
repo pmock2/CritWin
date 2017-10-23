@@ -1,5 +1,5 @@
 <?php
-include("header.php")
+//include("header.php")
 ?>
 <?php
 /**
@@ -16,6 +16,9 @@ if (isset($_SESSION["username"])) {
     $varfield = "Welcome " . $_SESSION["username"];
     $dropfield = "View Profile";
 }
+
+
+
 // Initialize any variables that the page might echo
 $u = "";
 $e = "";
@@ -25,6 +28,7 @@ $userlevel = "";
 $country = "";
 $joindate = "";
 $lastsession = "";
+
 // Make sure the _GET username is set, and sanitize it
 if (isset($_GET["u"])) {
     $u = preg_replace('#[^a-z0-9]#i', '', $_GET['u']);
@@ -85,6 +89,8 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
             <button class="biggertext">Log Out</button>
                 </form>';
 
+
+
     }
 
     if ($isOwner == "no") {
@@ -101,6 +107,7 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
     <title><?php echo $u; ?></title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!--    <script src="loginforms/js/main.js"></script>-->
     <script src="js/ajax.js">
 
@@ -167,14 +174,89 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
                 <p class="bigtext">Bio</p>
 <hr />
 <?php include_once("template_status.php"); ?>
-                </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 yomer-text-left">
+                <p class="bigtext">Cards</p>
+                <ul id="card_list">
+                    <!-- Insert list of cards here !-->
+                </ul>
+                <div id="card_target"></div>
+            </div>
+        </div>
+
         </div>
     </section>
 
 <script type='text/javascript' src='js/jquery.js'></script>
 <script type='text/javascript' src='js/bootstrap.min.js'></script>
 <script type='text/javascript' src='js/scrollReveal.js'></script>
+<!--<script type='text/javascript' src='js/user.js'></script>-->
+<script type="module">
+    import {Card} from '../js/card.js'
+
+    (function(){
+        // Make request for cards and list them in DOM.
+       cardRequestPromise().then((resp)=>{
+            let cards = resp.map((_card)=>{
+                let card = JSON.parse(_card["card"]);
+                card["card"] = JSON.parse(card["card"]);
+                return card;
+            });
+            addCards(cards);
+        })
+    })();
+
+    /**
+     * Make an asychronous request to retrieve card data matching username.
+     */
+    function cardRequestPromise(){
+        //TODO: CARD_API_URL needs to be changed once out of testing
+        const username = "<?php echo $u?>";
+        const CARD_API_URL = `http://critwin.com/test2/loginforms/cardapi.php?u=${username}`;
+        return(
+            new Promise((resolve, reject)=>{
+                fetch(CARD_API_URL)
+                    .then((resp)=>{
+                        resolve(resp.json());
+                    })
+                    .catch((err)=>{
+                        reject(err);
+                    })
+            })
+        )
+    }
+
+    /**
+     * Add list elements to DOM for each card.
+     * @param userCards array of cards.
+     */
+    function addCards(userCards){
+        let cardList = document.querySelector('#card_list');
+        userCards.forEach((userCard)=>{
+            console.log(userCard.title);
+            let userCardContainer = document.createElement('li');
+            userCardContainer.setAttribute('class','user-card-container');
+            let userCardElement = document.createElement('div');
+            userCardElement.setAttribute('class', 'user-card');
+            userCardElement.setAttribute('id', userCard.id);
+            userCardElement.textContent = userCard.card.title;
+
+            userCardElement.addEventListener('click', ()=>{
+                let cardData = userCard.card;
+                let _card = new Card(cardData.title, cardData.subtitle, cardData.armorClass, cardData.hitPoints, cardData.cardSpeed, cardData.skills, cardData.senses, cardData.languages,
+                    cardData.challengeRating, [ cardData.scores.str, cardData.scores.dex, cardData.scores.con, cardData.scores.int, cardData.scores.wis, cardData.scores.cha], cardData.abilities,
+                    cardData.actions, cardData.reactions, cardData.legendaryActions, cardData.notes);
+                document.querySelector('#card_target').innerHTML = '';
+                _card.render('#card_target')
+            });
+
+            userCardContainer.appendChild(userCardElement);
+            cardList.appendChild(userCardContainer);
+        })
+    }
+</script>
 <script type='text/javascript'>
     jQuery(document).ready(function () {
 
