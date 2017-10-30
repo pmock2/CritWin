@@ -46,6 +46,5 @@ if(isset($_POST["input"])) {
         <button id="btn" onclick="test()">Send</button>
         <p id="status">Response Goes here</p>
     </form>
-
 </body>
 </html>
