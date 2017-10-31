@@ -1,5 +1,5 @@
 <?php
-include_once("check_login_status.php");
+include_once("../check_login_status.php");
 // If user is already logged in, header that weenis away
 if($user_ok == true){
     header("location: user.php?u=".$_SESSION["username"]);
@@ -9,7 +9,7 @@ if($user_ok == true){
 // AJAX CALLS THIS LOGIN CODE TO EXECUTE
 if(isset($_POST["e"])){
     // CONNECT TO THE DATABASE
-    include_once("db_conx.php");
+    include_once("../db_conx.php");
     // GATHER THE POSTED DATA INTO LOCAL VARIABLES AND SANITIZE
     $e = mysqli_real_escape_string($db_conx, $_POST['e']);
     $p = md5($_POST['p']);
@@ -94,7 +94,7 @@ if(isset($_POST["e"])){
 <body>
 
 <div id="pageMiddle">
-    <h3>Log In Here poop</h3>
+    <h3>Log In Here</h3>
     <!-- LOGIN FORM -->
     <form id="loginform" onsubmit="return false;">
         <div>Email Address:</div>

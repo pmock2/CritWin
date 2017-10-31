@@ -179,7 +179,7 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
         <div class="row">
             <div class="col-md-12 yomer-text-left">
                 <p class="bigtext">Cards</p>
-                <ul id="card_list">
+                <ul id="card_list" style="list-style-type: none">
                     <!-- Insert list of cards here !-->
                 </ul>
                 <div id="card_target"></div>
@@ -214,10 +214,18 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
     function cardRequestPromise(){
         //TODO: CARD_API_URL needs to be changed once out of testing
         const username = "<?php echo $u?>";
-        const CARD_API_URL = `http://critwin.com/test2/loginforms/cardapi.php?u=${username}`;
+        // const CARD_API_URL = `http://critwin.com/test2/loginforms/cardapi.php?u=${username}`;
+        const CARD_API_URL = `http://critwin.com/api/cardapi.php?u=${username}`
+        let header = new Headers({
+            'Access-Control-Allow-Origin':'*',
+        });
         return(
             new Promise((resolve, reject)=>{
-                fetch(CARD_API_URL)
+                fetch(CARD_API_URL, 
+                    {method:'GET',
+                    mode: 'cors',
+                    header: header
+                })
                     .then((resp)=>{
                         resolve(resp.json());
                     })
@@ -235,7 +243,6 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
     function addCards(userCards){
         let cardList = document.querySelector('#card_list');
         userCards.forEach((userCard)=>{
-            console.log(userCard.title);
             let userCardContainer = document.createElement('li');
             userCardContainer.setAttribute('class','user-card-container');
             let userCardElement = document.createElement('div');
@@ -407,3 +414,5 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
 
 </body>
 </html>
+
+

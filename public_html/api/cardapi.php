@@ -1,4 +1,5 @@
-<?php
+<?php header("Access-Control-Allow-Origin: *");
+ 
 /**
  * Created by PhpStorm.
  * User: danny
@@ -41,7 +42,7 @@ class QueryResult{
     }
 }
 
-    include("header.php");
+    include("../header.php");
 // Echo all cards matching username.
     if (isset($_GET["u"])) {
         $username = $_GET["u"];
@@ -59,7 +60,7 @@ class QueryResult{
         $jsonQueryArray = array();
 
         for($i=0;$i<count($allQueryArray);$i++){
-            array_push($jsonQueryArray, array($i+1=> $allQueryArray[$i]->getJSON()));
+            array_push($jsonQueryArray, array("card"=> $allQueryArray[$i]->getJSON()));
         }
 
         echo(json_encode($jsonQueryArray));
