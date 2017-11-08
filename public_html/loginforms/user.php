@@ -179,7 +179,7 @@ while ($row = mysqli_fetch_array($user_query, MYSQLI_ASSOC)) {
         <div class="row">
             <div class="col-md-12 yomer-text-left">
                 <p class="bigtext">Cards</p>
-                <ul id="card_list" style="list-style-type: none">
+                <ul id="card_list">
                     <!-- Insert list of cards here !-->
                 </ul>
                 <div id="card_target"></div>

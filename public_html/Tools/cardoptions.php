@@ -25,7 +25,7 @@ if(isset($_POST["card"])) {
 //    TODO Add a preg_replace to the JSON input.
 //    $input = preg_replace('#[^a-z0-9]#i', '', $_POST['card']);
     $input = $_POST["card"];
-    if(isset($_SESSION['usernamßßßße'])){
+    if(isset($_SESSION['username'])){
         $u = $_SESSION['username'];
     } else {
         $u = 'no_username';
@@ -236,8 +236,10 @@ if(isset($_POST["card"])) {
                            name="notes">
                 </div>
                 <hr>
+                <div>
+                    <button id='card-submit-btn' class="btn btn-default" style="width:100px;">Submit</button>
 
-                <button id='card-submit-btn' class="btn btn-default">Submit</button>
+                </div>
             </form>
         </div>
     </section>
@@ -340,6 +342,7 @@ if(isset($_POST["card"])) {
             try{
                 _card.render("#card_target");
                 //document.querySelector('#options').setAttribute('style', 'none');
+                saveCard(_card);
             } catch (e){
                 console.error(e);
             }
@@ -475,6 +478,13 @@ if(isset($_POST["card"])) {
 
         ajax.send(`card=${cardJSON}`);
     }
+
+    function ajaxObj(meth, url) {
+            var x = new XMLHttpRequest();
+            x.open(meth, url, true);
+            x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            return x;
+        }
 
     function ajaxReturn(x) {
         if (x.readyState === 4 && x.status === 200) {

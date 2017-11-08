@@ -25,7 +25,7 @@ include("../header.php");
   
     <link href="../css/style.css" rel="stylesheet">
     <link href="../font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -128,7 +128,7 @@ include("../header.php");
     <input id='new_text_color' type="color" value="#ffffff" class="option_bg_color">
     <div id='new_preview'></div>
     <br>
-    <button id="add_btn" class="btn btn-default btn-lg btn-block add_btn">Add</button>
+    <button id="add_btn" class="btn btn-default btn-lg btn-block add_btn" style="width:50%; display:block;">Add</button>
 </div>
 
 
@@ -141,7 +141,7 @@ include("../header.php");
             <span style="font-size:35px;cursor:pointer;">+</span>
         </div>
         <div class="row">
-            <div class="col-md-12 yomer-text-center title_wrapper">
+            <div class="col-md-12 yomer-text-center">
                 <h2 style="word-wrap: break-word; color: white; font-size: 50px;">Name</h2>
             </div>
         </div>
@@ -236,8 +236,6 @@ include("../header.php");
 </div>
 <script type="module">
 (function(){
-
- 
     /**
      * Add event listener for Add button in right side nav. 
      * The Add button should inject an element into the dom, according
@@ -338,8 +336,6 @@ class CharacterField{
         return elementContainer; 
     }
 }
-   
-
 </script>
 </body>
 </html>
